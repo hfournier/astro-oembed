@@ -1,0 +1,106 @@
+---
+title: fetchOembed
+description: Reference for the fetchOembed utility function.
+---
+
+The `fetchOembed` function fetches an oEmbed response for a given URL. Use it
+when you need the raw response data in your own components or server-side code,
+rather than delegating rendering to the [`<Oembed>` component](/components/oembed/).
+
+## Usage
+
+```ts
+import { fetchOembed } from 'astro-oembed';
+
+const response = await fetchOembed(
+  'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+);
+```
+
+## Parameters
+
+| Parameter | Type                 | Description                                         |
+| --------- | -------------------- | --------------------------------------------------- |
+| `url`     | `string`             | **Required.** The content URL to resolve and fetch. |
+| `options` | `FetchOembedOptions` | Optional. See [Options](#options) below.            |
+
+## Options
+
+| Option        | Type          | Default     | Description                                                                               |
+| ------------- | ------------- | ----------- | ----------------------------------------------------------------------------------------- |
+| `maxWidth`    | `number`      | —           | Passed to the endpoint as `maxwidth`.                                                     |
+| `maxHeight`   | `number`      | —           | Passed to the endpoint as `maxheight`.                                                    |
+| `accessToken` | `string`      | —           | Passed as `access_token` for providers that require authentication (e.g. Meta Graph API). |
+| `signal`      | `AbortSignal` | 5 s timeout | Custom abort signal. Overrides the default 5-second timeout.                              |
+
+## Return value
+
+Returns `Promise<OembedResponse>` — a discriminated union on the `type` field:
+
+| `type`    | Resolved type | Notable fields               |
+| --------- | ------------- | ---------------------------- |
+| `"video"` | `OembedVideo` | `html`, `width`, `height`    |
+| `"rich"`  | `OembedRich`  | `html`, `width`, `height`    |
+| `"photo"` | `OembedPhoto` | `url`, `width`, `height`     |
+| `"link"`  | `OembedLink`  | `title`, `author_name`, etc. |
+
+All types extend `OembedBase` which includes common fields like `title`,
+`author_name`, `author_url`, `thumbnail_url`, and `provider_name`.
+
+## Errors
+
+The returned promise rejects when:
+
+- No provider is registered for the URL (checked against the bundled [Provider Snapshot](/reference/providers/))
+- The oEmbed endpoint returns a non-2xx status
+- The request times out or the provided `signal` is aborted
+
+## Examples
+
+### Narrowing the response type
+
+`OembedResponse` is a discriminated union, so checking `response.type` gives you
+full type safety:
+
+```ts
+import { fetchOembed } from 'astro-oembed';
+
+const response = await fetchOembed(
+  'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+);
+
+if (response.type === 'video') {
+  console.log(response.html); // string — TypeScript knows this is OembedVideo
+} else if (response.type === 'photo') {
+  console.log(response.url); // string — TypeScript knows this is OembedPhoto
+}
+```
+
+### Error handling
+
+```ts
+import { fetchOembed } from 'astro-oembed';
+
+try {
+  const response = await fetchOembed(url);
+  // use response…
+} catch (err) {
+  console.warn('Could not load oEmbed data:', err);
+}
+```
+
+### Custom timeout
+
+Pass your own `AbortSignal` to override the default 5-second timeout:
+
+```ts
+import { fetchOembed } from 'astro-oembed';
+
+const response = await fetchOembed(url, {
+  signal: AbortSignal.timeout(10_000),
+});
+```
+
+:::tip
+Please refer to the [oEmbed specification](https://oembed.com/) for more details.
+:::

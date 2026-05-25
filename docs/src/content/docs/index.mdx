@@ -1,0 +1,31 @@
+---
+title: astro-oembed
+description: Embed any oEmbed-compatible URL in your Astro site with a single component.
+template: splash
+hero:
+  tagline: Embed any URL in Astro using the oEmbed protocol.
+  actions:
+    - text: Get started
+      link: /getting-started/
+      icon: right-arrow
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <Card title="300+ providers" icon="seti:json">
+    Supports YouTube, Vimeo, Twitter, and hundreds more — any service in the
+    [oEmbed registry](https://oembed.com/).
+  </Card>
+  <Card title="Click-to-load" icon="rocket">
+    Video and rich embeds render a lightweight placeholder. The iframe loads
+    only when the user clicks.
+  </Card>
+  <Card title="All response types" icon="list-format">
+    Handles all four oEmbed types: `video`, `rich`, `photo`, and `link`.
+  </Card>
+  <Card title="TypeScript" icon="seti:typescript">
+    Fully typed. Use `fetchOembed` to get a typed `OembedResponse` and narrow on
+    `response.type` with full IDE support.
+  </Card>
+</CardGrid>

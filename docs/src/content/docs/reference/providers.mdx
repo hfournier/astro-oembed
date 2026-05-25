@@ -1,0 +1,20 @@
+---
+title: oEmbed Providers
+description: Browse and filter the list of supported oEmbed providers and their URL patterns.
+---
+
+import OembedProviders from '../../../components/OembedProviders.astro';
+
+The `<Oembed>` component supports URLs from any provider in the list below. Select a provider to see its name, homepage, and the URL patterns (Schemes) it accepts.
+
+<OembedProviders />
+
+## Keeping the Provider Snapshot up to date
+
+The list above reflects the **Provider Snapshot** bundled with the installed version of `astro-oembed` — the same data the `<Oembed>` component uses at runtime. To pull in newly registered providers from the [oEmbed registry json file](https://oembed.com/providers.json), run:
+
+```sh
+pnpm update-providers
+```
+
+from the package root, then release a new version.

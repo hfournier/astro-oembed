@@ -1,0 +1,31 @@
+name: Update providers snapshot
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Weekly, Monday at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter astro-oembed update-providers
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: 'chore: update providers snapshot'
+          title: 'chore: update providers snapshot'
+          body: |
+            Automated update of `src/data/providers.json` from the [oEmbed registry](https://oembed.com/).
+          branch: chore/update-providers-snapshot
+          labels: dependencies
+          delete-branch: true

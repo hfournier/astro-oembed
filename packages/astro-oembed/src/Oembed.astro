@@ -1,0 +1,240 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { Image } from 'astro:assets';
+import './Oembed.css';
+import { fetchOembed } from './fetchOembed';
+import { buildSizingStyle } from './sizing';
+import type { OembedResponse } from './types';
+
+interface Props extends HTMLAttributes<'div'> {
+  url: string;
+  poster?: string;
+  placeholderColor?: string;
+  maxWidth?: number;
+  maxHeight?: number;
+  accessToken?: string;
+}
+
+const {
+  url,
+  poster,
+  placeholderColor,
+  maxWidth,
+  maxHeight,
+  accessToken,
+  ...attrs
+} = Astro.props;
+
+let response: OembedResponse | null = null;
+
+try {
+  response = await fetchOembed(url, { maxWidth, maxHeight, accessToken });
+} catch (err) {
+  import.meta.env.DEV && console.warn(`[astro-oembed]`, err);
+}
+
+const htmlContent =
+  (response?.type === 'video' || response?.type === 'rich') &&
+  'html' in response
+    ? response.html || ''
+    : '';
+
+const isHtmlEmbed = htmlContent.length > 0;
+const isIframeEmbed = /<iframe/i.test(htmlContent);
+
+const embedWidth = response && response.type !== 'link' ? response.width : null;
+const embedHeight =
+  response && response.type !== 'link' ? response.height : null;
+const thumbWidth = response?.thumbnail_width ?? null;
+const thumbHeight = response?.thumbnail_height ?? null;
+const sizingStyle = buildSizingStyle(
+  embedWidth,
+  embedHeight,
+  thumbWidth,
+  thumbHeight,
+  !isIframeEmbed
+);
+
+// Validate placeholderColor against an allowlist of CSS color characters to prevent
+// property injection via the inline style attribute.
+const safeColor =
+  placeholderColor && /^[a-zA-Z0-9#(),. /%+-]+$/.test(placeholderColor)
+    ? placeholderColor
+    : undefined;
+if (placeholderColor && !safeColor) {
+  import.meta.env.DEV &&
+    console.warn(
+      `[astro-oembed] Invalid placeholderColor "${placeholderColor}" — ignoring`
+    );
+}
+
+const resolvedPoster = poster ?? (response?.thumbnail_url || undefined);
+---
+
+{
+  response === null ? null : isHtmlEmbed ? (
+    <lite-oembed
+      tabindex="0"
+      role="button"
+      aria-label={`Load embed${response.title ? `: ${response.title}` : ''}`}
+      style={`${sizingStyle} max-height: 90dvh;${safeColor ? ` --lite-oembed-placeholder-color: ${safeColor};` : ''}`}
+      data-oembed-type={response.type}
+      data-html={htmlContent}
+      {...attrs}
+    >
+      {resolvedPoster && (
+        <img
+          src={resolvedPoster}
+          alt={response.title ?? ''}
+          loading="lazy"
+          decoding="async"
+        />
+      )}
+      <div class="play-btn" aria-hidden="true" />
+      {(response.title || response.author_name || response.photographer) && (
+        <>
+          <div class="oembed-gradient" aria-hidden="true" />
+          <div class="oembed-info">
+            {response.title && <div class="oembed-title">{response.title}</div>}
+            {response.author_name && (
+              <div class="oembed-author">{response.author_name}</div>
+            )}
+            {response.caption && (
+              <div class="oembed-caption">{response.caption}</div>
+            )}
+            {response.photographer && (
+              <div class="oembed-photographer">
+                {response.photographer}
+                {response.collection && ` | ${response.collection}`}
+              </div>
+            )}
+          </div>
+        </>
+      )}
+    </lite-oembed>
+  ) : response.type === 'photo' ? (
+    <Image
+      {...attrs}
+      src={response.url}
+      width={response.width}
+      height={response.height}
+      alt={response.title ?? ''}
+    />
+  ) : response.type === 'link' ? (
+    <a {...attrs} href={url}>
+      {response.title ?? url}
+    </a>
+  ) : null
+}
+
+<script>
+  class LiteOembed extends HTMLElement {
+    static preconnected = new Set<string>();
+
+    connectedCallback() {
+      this.addEventListener(
+        'pointerover',
+        () => LiteOembed.warmConnections(this.dataset.html || ''),
+        { once: true }
+      );
+      this.addEventListener('click', () => this.load(), { once: true });
+      this.addEventListener(
+        'keydown',
+        (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.load();
+          }
+        },
+        { once: true }
+      );
+    }
+
+    static addPrefetch(rel: string, url: string): void {
+      const linkEl = document.createElement('link');
+      linkEl.rel = rel;
+      linkEl.href = url;
+      document.head.append(linkEl);
+    }
+
+    static warmConnections(html: string): void {
+      const template = document.createElement('template');
+      template.innerHTML = html;
+      const src = template.content.querySelector('iframe')?.getAttribute('src');
+      if (!src) return;
+      try {
+        const origin = new URL(src).origin;
+        if (LiteOembed.preconnected.has(origin)) return;
+        LiteOembed.addPrefetch('preconnect', origin);
+        LiteOembed.preconnected.add(origin);
+      } catch {
+        // invalid src — skip
+      }
+    }
+
+    load() {
+      const html = this.dataset.html;
+      if (!html) return;
+      const template = document.createElement('template');
+      template.innerHTML = html;
+
+      const srcIframe = template.content.querySelector('iframe');
+      if (srcIframe) {
+        const iframe = srcIframe.cloneNode(true) as HTMLIFrameElement;
+        iframe.classList.add('oembed-iframe');
+        const src = new URL(iframe.src);
+        src.searchParams.set('autoplay', '1');
+        iframe.src = src.toString();
+        iframe.loading = 'eager';
+        this.replaceChildren(iframe);
+        this.dataset.loaded = '';
+        return;
+      }
+
+      // Script-based embed (Twitter/X, TikTok, …)
+      // innerHTML doesn't execute <script> tags, so we separate scripts from
+      // content, add the content first so widget loaders find it, then
+      // manually recreate and append each script to trigger execution.
+      const scripts = Array.from(template.content.querySelectorAll('script'));
+      scripts.forEach((s) => s.remove());
+      this.replaceChildren(...Array.from(template.content.childNodes));
+      this.dataset.loaded = '';
+      this.style.aspectRatio = '';
+      this.style.maxHeight = '';
+
+      for (const orig of scripts) {
+        if (orig.src) {
+          const alreadyLoaded = [...document.scripts].some(
+            (s) => s.src === orig.src
+          );
+          if (alreadyLoaded) {
+            // Script already on page — call widget refresh APIs directly
+            (window as any).twttr?.widgets.load();
+            (window as any).instgrm?.Embeds.process();
+          } else {
+            const s = document.createElement('script');
+            for (const attr of Array.from(orig.attributes)) {
+              s.setAttribute(attr.name, attr.value);
+            }
+            s.addEventListener('load', () => {
+              // Give the widget library one tick to finish its own async init
+              setTimeout(() => {
+                (window as any).twttr?.widgets.load();
+                (window as any).instgrm?.Embeds.process();
+              }, 0);
+            });
+            this.append(s);
+          }
+        } else if (orig.textContent) {
+          const s = document.createElement('script');
+          s.textContent = orig.textContent;
+          this.append(s);
+        }
+      }
+    }
+  }
+
+  if (!customElements.get('lite-oembed')) {
+    customElements.define('lite-oembed', LiteOembed);
+  }
+</script>

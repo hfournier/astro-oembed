@@ -1,0 +1,167 @@
+---
+import { Oembed } from 'astro-oembed';
+import { Code } from 'astro:components';
+import rick_rolled from '../assets/rick-rolled.png';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>astro-oembed demo</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      h2 {
+        margin-top: 2rem;
+      }
+      .embed {
+        margin: 1rem 0;
+      }
+      .code {
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>astro-oembed examples</h1>
+
+    <h2>Bluesky</h2>
+    <div class="embed">
+      <Oembed url="https://bsky.app/profile/astro.build/post/3mlbttjkvzi2w" />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed\n  url="https://bsky.app/profile/astro.build/post/3mlbttjkvzi2w"\n/>`}
+      lang="astro"
+    />
+
+    <h2>Reddit</h2>
+    <div class="embed">
+      <Oembed
+        url="https://www.reddit.com/r/withastro/comments/1rq4y79/astro_60_is_now_available/"
+      />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed\n  url="https://www.reddit.com/r/withastro/comments/1rq4y79/astro_60_is_now_available/"\n/>`}
+      lang="astro"
+    />
+
+    <h2>X</h2>
+    <div class="embed">
+      <Oembed url="https://x.com/astrodotbuild/status/1820423005912105149" />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed\n  url="https://x.com/astrodotbuild/status/1820423005912105149"\n/>`}
+      lang="astro"
+    />
+
+    <h2>YouTube</h2>
+    <div class="embed">
+      <Oembed url="https://youtu.be/0mKNSwi7Wvk?t=39" />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed\n  url="https://youtu.be/0mKNSwi7Wvk?t=39"\n/>`}
+      lang="astro"
+    />
+
+    <h2>YouTube (with poster)</h2>
+    <div class="embed">
+      <Oembed
+        url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        poster={rick_rolled.src}
+      />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed\n  url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"\n  poster={rick_rolled.src}\n/>`}
+      lang="astro"
+    />
+
+    <h2>Vimeo</h2>
+    <div class="embed">
+      <Oembed url="https://vimeo.com/1094756949" />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed\n  url="https://vimeo.com/1094756949"\n/>`}
+      lang="astro"
+    />
+
+    <h2>SoundCloud</h2>
+    <div class="embed">
+      <Oembed
+        url="https://soundcloud.com/rick-astley-official/never-gonna-give-you-up"
+      />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed\n  url="https://soundcloud.com/rick-astley-official/never-gonna-give-you-up"\n/>`}
+      lang="astro"
+    />
+
+    <h2>Spotify</h2>
+    <div class="embed">
+      <Oembed url="https://open.spotify.com/track/4cOdK2wGLETKBW3PvgPWqT" />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed\n  url="https://open.spotify.com/track/4cOdK2wGLETKBW3PvgPWqT"\n/>`}
+      lang="astro"
+    />
+
+    <h2>TikTok</h2>
+    <div class="embed">
+      <Oembed
+        url="https://www.tiktok.com/@rickastleyofficial/video/7512867562258992406"
+      />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed\n  url="https://www.tiktok.com/@rickastleyofficial/video/7512867562258992406"\n/>`}
+      lang="astro"
+    />
+
+    <h2>Flickr</h2>
+    <div class="embed">
+      <Oembed
+        url="https://www.flickr.com/photos/trillionare/3379594348/in/photolist-69DiE5-9hWT4i-3Rp6P4-i1zESb-2WNXDs-b48mCR-4Vfp9r-LMmNNi-sLKri-73SXEs-24hb5d7-5YbXtK-6QWq9N-9hWSLR-6LZ7We-ak19To-844rAD-mqgoS-3RtjLd-b8iJFB-2onEqHK-3RtjRA-do5w6-B4qrY-5MrijS-5BzLvE-4mwuFG-7PPa4Z-7bTt9P-2oDzaZ8-2mbEbNN-dozJag-ooGxT-3RtjF5-4Vfqti-5vettp-3YvAB-qacDiv-dwsbB3-6LZ6u8-2WJvW8-3Apaq-4VfqVv-6YPRNK-8KfLPc-7S4o5m-do6uf-RPPKxY-6Hway8-ooGxV"
+      />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed\n  url="https://www.flickr.com/photos/trillionare/3379594348/in/photolist-69DiE5-9hWT4i-3Rp6P4-i1zESb-2WNXDs-b48mCR-4Vfp9r-LMmNNi-sLKri-73SXEs-24hb5d7-5YbXtK-6QWq9N-9hWSLR-6LZ7We-ak19To-844rAD-mqgoS-3RtjLd-b8iJFB-2onEqHK-3RtjRA-do5w6-B4qrY-5MrijS-5BzLvE-4mwuFG-7PPa4Z-7bTt9P-2oDzaZ8-2mbEbNN-dozJag-ooGxT-3RtjF5-4Vfqti-5vettp-3YvAB-qacDiv-dwsbB3-6LZ6u8-2WJvW8-3Apaq-4VfqVv-6YPRNK-8KfLPc-7S4o5m-do6uf-RPPKxY-6Hway8-ooGxV"\n/>`}
+      lang="astro"
+    />
+
+    <h2>Flickr (with maxWidth)</h2>
+    <div class="embed">
+      <Oembed
+        url="https://www.flickr.com/photos/trillionare/3379594348/in/photolist-69DiE5-9hWT4i-3Rp6P4-i1zESb-2WNXDs-b48mCR-4Vfp9r-LMmNNi-sLKri-73SXEs-24hb5d7-5YbXtK-6QWq9N-9hWSLR-6LZ7We-ak19To-844rAD-mqgoS-3RtjLd-b8iJFB-2onEqHK-3RtjRA-do5w6-B4qrY-5MrijS-5BzLvE-4mwuFG-7PPa4Z-7bTt9P-2oDzaZ8-2mbEbNN-dozJag-ooGxT-3RtjF5-4Vfqti-5vettp-3YvAB-qacDiv-dwsbB3-6LZ6u8-2WJvW8-3Apaq-4VfqVv-6YPRNK-8KfLPc-7S4o5m-do6uf-RPPKxY-6Hway8-ooGxV"
+        maxWidth={640}
+      />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed\n  url="https://www.flickr.com/photos/trillionare/3379594348/in/photolist-69DiE5-9hWT4i-3Rp6P4-i1zESb-2WNXDs-b48mCR-4Vfp9r-LMmNNi-sLKri-73SXEs-24hb5d7-5YbXtK-6QWq9N-9hWSLR-6LZ7We-ak19To-844rAD-mqgoS-3RtjLd-b8iJFB-2onEqHK-3RtjRA-do5w6-B4qrY-5MrijS-5BzLvE-4mwuFG-7PPa4Z-7bTt9P-2oDzaZ8-2mbEbNN-dozJag-ooGxT-3RtjF5-4Vfqti-5vettp-3YvAB-qacDiv-dwsbB3-6LZ6u8-2WJvW8-3Apaq-4VfqVv-6YPRNK-8KfLPc-7S4o5m-do6uf-RPPKxY-6Hway8-ooGxV"\n  maxWidth={640}\n/>`}
+      lang="astro"
+    />
+
+    <h2>Getty Images</h2>
+    <div class="embed">
+      <Oembed url="http://gty.im/3225086" />
+    </div>
+    <Code
+      class="code"
+      code={`<Oembed url="http://gty.im/3225086" />`}
+      lang="astro"
+    />
+  </body>
+</html>

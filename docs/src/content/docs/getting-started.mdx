@@ -1,0 +1,41 @@
+---
+title: Getting Started
+description: How to install astro-oembed and embed your first URL.
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+## Installation
+
+<Tabs>
+  <TabItem label="npm">```sh npm install astro-oembed ```</TabItem>
+  <TabItem label="pnpm">```sh pnpm add astro-oembed ```</TabItem>
+  <TabItem label="Yarn">```sh yarn add astro-oembed ```</TabItem>
+</Tabs>
+
+## Usage
+
+Pass any supported URL to the `<Oembed>` component and it will resolve the provider,
+fetch the oEmbed response at build time, and render the appropriate output.
+
+<Tabs>
+	<TabItem label="Astro">
+		```astro
+		---
+		import { Oembed } from 'astro-oembed';
+		---
+
+    	<Oembed url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+    	```
+    </TabItem>
+    <TabItem label="MDX">
+    	```mdx
+    	import { Oembed } from 'astro-oembed';
+
+    	<Oembed url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+    	```
+    </TabItem>
+
+</Tabs>
+
+See the [`<Oembed>` component reference](/components/oembed/) for the full list of props.

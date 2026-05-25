@@ -1,0 +1,80 @@
+---
+title: Oembed
+description: Reference for the <Oembed> component.
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+The `<Oembed>` component resolves a URL against the bundled
+[Provider Snapshot](/reference/providers/), fetches the oEmbed response at build time, and
+renders the appropriate output.
+
+## Usage
+
+<Tabs>
+	<TabItem label="Astro">
+		```astro
+		---
+		import { Oembed } from 'astro-oembed';
+		---
+
+    	<Oembed url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+    	```
+    </TabItem>
+    <TabItem label="MDX">
+    	```mdx
+    	import { Oembed } from 'astro-oembed';
+
+    	<Oembed url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" />
+    	```
+    </TabItem>
+
+</Tabs>
+
+## Props
+
+| Prop               | Type     | Default | Description                                                                               |
+| ------------------ | -------- | ------- | ----------------------------------------------------------------------------------------- |
+| `url`              | `string` | —       | **Required.** The URL to embed.                                                           |
+| `poster`           | `string` | —       | Override image for the click-to-load placeholder.                                         |
+| `placeholderColor` | `string` | —       | Fallback background color when no poster is available.                                    |
+| `maxWidth`         | `number` | —       | Passed to the oEmbed endpoint as `maxwidth`.                                              |
+| `maxHeight`        | `number` | —       | Passed to the oEmbed endpoint as `maxheight`.                                             |
+| `accessToken`      | `string` | —       | Passed as `access_token` for providers that require authentication (e.g. Meta Graph API). |
+
+Additional HTML attributes are spread onto the outermost rendered element.
+
+## Rendering
+
+The rendered output depends on the oEmbed response type returned by the provider.
+
+| oEmbed type          | Rendered as                                                                     |
+| -------------------- | ------------------------------------------------------------------------------- |
+| `video` or `rich`    | `<lite-oembed>` — a click-to-load placeholder that swaps in the iframe on click |
+| `photo`              | Astro `<Image />` (requires the provider domain in `image.domains`)             |
+| `link`               | `<a href={url}>{title ?? url}</a>`                                              |
+| No matching provider | Nothing (+ `console.warn` in dev)                                               |
+
+### Video and rich embeds
+
+`video` and `rich` responses that return an `<iframe>` are wrapped in a `<lite-oembed>`
+custom element. The iframe is not loaded until the user clicks the placeholder, keeping
+initial page weight low.
+
+The placeholder displays a poster image resolved in priority order:
+the `poster` prop → `thumbnail_url` from the oEmbed response → a solid colour using
+`placeholderColor`.
+
+### Photo embeds
+
+Photo responses are rendered with Astro's built-in `<Image />` component. The provider's
+image domain must be listed in your Astro config:
+
+```js
+// astro.config.mjs
+export default defineConfig({
+  image: {
+    domains: ['photos.example.com'],
+  },
+});
+```

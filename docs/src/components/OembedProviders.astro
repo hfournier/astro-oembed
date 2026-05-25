@@ -1,0 +1,315 @@
+---
+import rawProviders from '../../../packages/astro-oembed/src/data/providers.json';
+
+type Endpoint = { schemes?: string[]; url: string };
+type RawProvider = {
+  provider_name: string;
+  provider_url: string;
+  endpoints: Endpoint[];
+};
+
+const providers = (rawProviders as RawProvider[])
+  .map((p) => ({
+    name: p.provider_name,
+    url: p.provider_url,
+    schemes: p.endpoints.flatMap((ep) => ep.schemes ?? []),
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<div class="oembed-providers">
+  <div class="providers-toolbar">
+    <input
+      type="search"
+      id="provider-filter"
+      placeholder="Filter providers…"
+      aria-label="Filter providers"
+    />
+    <span id="provider-count" class="providers-count"
+      >{providers.length} providers</span
+    >
+  </div>
+  <div class="providers-layout">
+    <ul
+      class="providers-list"
+      id="providers-list"
+      role="listbox"
+      aria-label="oEmbed providers"
+    >
+      {
+        providers.map((p) => (
+          <li role="option" aria-selected="false">
+            <button
+              class="provider-btn"
+              data-name={p.name}
+              data-url={p.url}
+              data-schemes={JSON.stringify(p.schemes)}
+            >
+              {p.name}
+            </button>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="provider-detail" id="provider-detail" aria-live="polite">
+      <p class="provider-detail-empty">
+        Select a provider from the list to see its details.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const filter = document.getElementById('provider-filter') as HTMLInputElement;
+  const list = document.getElementById('providers-list')!;
+  const detail = document.getElementById('provider-detail')!;
+  const countEl = document.getElementById('provider-count')!;
+  const buttons = Array.from(
+    list.querySelectorAll<HTMLButtonElement>('.provider-btn')
+  );
+  const total = buttons.length;
+
+  function updateCount(visible: number) {
+    countEl.textContent =
+      visible === total
+        ? `${total} providers`
+        : `${visible} of ${total} providers`;
+  }
+
+  filter.addEventListener('input', () => {
+    const q = filter.value.trim().toLowerCase();
+    let visible = 0;
+    for (const btn of buttons) {
+      const show = btn.dataset.name!.toLowerCase().includes(q);
+      (btn.closest('li') as HTMLElement).hidden = !show;
+      if (show) visible++;
+    }
+    updateCount(visible);
+
+    // Clear selection when the filter changes
+    for (const li of list.querySelectorAll('[aria-selected="true"]')) {
+      li.setAttribute('aria-selected', 'false');
+    }
+    for (const b of list.querySelectorAll('.provider-btn.active')) {
+      b.classList.remove('active');
+    }
+    detail.innerHTML =
+      '<p class="provider-detail-empty">Select a provider from the list to see its details.</p>';
+  });
+
+  for (const btn of buttons) {
+    btn.addEventListener('click', () => {
+      // Deselect previous
+      for (const li of list.querySelectorAll('[aria-selected="true"]')) {
+        li.setAttribute('aria-selected', 'false');
+      }
+      for (const b of list.querySelectorAll('.provider-btn.active')) {
+        b.classList.remove('active');
+      }
+
+      // Select current
+      btn.closest('li')!.setAttribute('aria-selected', 'true');
+      btn.classList.add('active');
+      btn.scrollIntoView({ block: 'nearest' });
+
+      const schemes: string[] = JSON.parse(btn.dataset.schemes!);
+      const name = btn.dataset.name!;
+      const url = btn.dataset.url!;
+
+      // Build detail panel with DOM methods to avoid innerHTML XSS
+      detail.textContent = '';
+
+      const h3 = document.createElement('h3');
+      h3.className = 'provider-detail-name';
+      const a = document.createElement('a');
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.textContent = name;
+      h3.appendChild(a);
+      detail.appendChild(h3);
+
+      if (schemes.length > 0) {
+        const div = document.createElement('div');
+        div.className = 'provider-schemes';
+
+        const h4 = document.createElement('h4');
+        h4.textContent = 'Supported URL patterns';
+        div.appendChild(h4);
+
+        const ul = document.createElement('ul');
+        for (const s of schemes) {
+          const li = document.createElement('li');
+          const code = document.createElement('code');
+          code.textContent = s;
+          li.appendChild(code);
+          ul.appendChild(li);
+        }
+        div.appendChild(ul);
+        detail.appendChild(div);
+      } else {
+        const p = document.createElement('p');
+        p.className = 'provider-no-schemes';
+        p.textContent =
+          'This provider uses endpoint discovery — no URL patterns are defined.';
+        detail.appendChild(p);
+      }
+    });
+  }
+</script>
+
+<style>
+  .oembed-providers {
+    margin-block: 1.5rem;
+  }
+
+  .providers-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #provider-filter {
+    flex: 1;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.375rem;
+    background: var(--sl-color-bg);
+    color: var(--sl-color-text);
+    font-size: 0.9rem;
+  }
+
+  #provider-filter:focus {
+    outline: 2px solid var(--sl-color-accent);
+    outline-offset: 1px;
+    border-color: var(--sl-color-accent);
+  }
+
+  .providers-count {
+    font-size: 0.8rem;
+    color: var(--sl-color-gray-3);
+    white-space: nowrap;
+  }
+
+  .providers-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 0;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 500px;
+  }
+
+  .providers-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    border-right: 1px solid var(--sl-color-hairline);
+    background: var(--sl-color-bg-sidebar);
+  }
+
+  .providers-list li {
+    margin: 0;
+  }
+
+  .provider-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.45rem 0.75rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--sl-color-hairline);
+    color: var(--sl-color-text);
+    font-size: 0.825rem;
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+
+  .provider-btn:hover {
+    background: var(--sl-color-gray-6, #f0f0f0);
+  }
+
+  .provider-btn.active {
+    background: var(--sl-color-accent-low);
+    color: var(--sl-color-accent-high);
+    font-weight: 600;
+  }
+
+  .provider-detail {
+    padding: 1rem 1.25rem;
+    overflow-y: auto;
+  }
+
+  .provider-detail-empty,
+  .provider-no-schemes {
+    color: var(--sl-color-gray-3);
+    font-style: italic;
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  .provider-detail-name {
+    margin-top: 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid var(--sl-color-hairline);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .provider-detail-name a {
+    color: var(--sl-color-accent);
+    text-decoration: none;
+  }
+
+  .provider-detail-name a:hover {
+    text-decoration: underline;
+  }
+
+  .provider-schemes h4 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--sl-color-gray-3);
+    margin-block: 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .provider-schemes ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .provider-schemes li {
+    margin: 0;
+  }
+
+  .provider-schemes code {
+    font-size: 0.775rem;
+    word-break: break-all;
+  }
+
+  @media (max-width: 640px) {
+    .providers-layout {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
+    .providers-list {
+      border-right: none;
+      border-bottom: 1px solid var(--sl-color-hairline);
+      max-height: 220px;
+    }
+
+    .provider-detail {
+      min-height: 200px;
+    }
+  }
+</style>
