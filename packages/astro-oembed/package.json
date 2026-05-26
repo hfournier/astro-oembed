@@ -8,7 +8,8 @@
     "./providers": "./src/providers.ts"
   },
   "files": [
-    "src"
+    "src",
+    "!src/**/*.test.ts"
   ],
   "keywords": [
     "astro",
@@ -16,6 +17,12 @@
     "embed",
     "component"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hfournier/astro-oembed",
+    "directory": "packages/astro-oembed"
+  },
+  "homepage": "https://astro-oembed.netlify.app",
   "author": "hfournier",
   "license": "MIT",
   "bugs": "https://github.com/hfournier/astro-oembed/issues",
