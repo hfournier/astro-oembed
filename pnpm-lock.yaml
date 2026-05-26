@@ -50,6 +50,12 @@ importers:
       astro:
         specifier: ^6.3.1
         version: 6.3.7(@types/node@24.12.4)(rollup@4.60.4)
+      astro-oembed:
+        specifier: workspace:*
+        version: link:../packages/astro-oembed
+      astro-oembed-integration:
+        specifier: workspace:*
+        version: link:../packages/astro-oembed-integration
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -65,6 +71,28 @@ importers:
       vitest:
         specifier: ^2.0.0
         version: 2.1.9(@types/node@24.12.4)
+
+  packages/astro-oembed-integration:
+    dependencies:
+      acorn:
+        specifier: ^8.0.0
+        version: 8.16.0
+      astro-oembed:
+        specifier: workspace:*
+        version: link:../astro-oembed
+      unist-util-select:
+        specifier: ^5.1.0
+        version: 5.1.0
+    devDependencies:
+      '@types/unist':
+        specifier: ^3.0.3
+        version: 3.0.3
+      astro:
+        specifier: ^5.0.0
+        version: 5.18.1(@types/node@24.12.4)(rollup@4.60.4)(typescript@5.9.3)
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
 
 packages:
 
@@ -2937,6 +2965,9 @@ packages:
 
   unist-util-remove-position@5.0.0:
     resolution: {integrity: sha512-Hp5Kh3wLxv0PHj9m2yZhhLt58KzPtEYKQQ4yxfYFEO7EvHwzyDYnduhHnY1mDxoqr7VUwVuHXk9RXKIiYS1N8Q==}
+
+  unist-util-select@5.1.0:
+    resolution: {integrity: sha512-4A5mfokSHG/rNQ4g7gSbdEs+H586xyd24sdJqF1IWamqrLHvYb+DH48fzxowyOhOfK7YSqX+XlCojAyuuyyT2A==}
 
   unist-util-stringify-position@4.0.0:
     resolution: {integrity: sha512-0ASV06AAoKCDkS2+xw5RXJywruurpbC4JZSm7nr7MOt1ojAzvyyaO+UxZf18j8FCF6kmzCZKcAgN/yu2gm2XgQ==}
@@ -6767,6 +6798,14 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
       unist-util-visit: 5.1.0
+
+  unist-util-select@5.1.0:
+    dependencies:
+      '@types/unist': 3.0.3
+      css-selector-parser: 3.3.0
+      devlop: 1.1.0
+      nth-check: 2.1.1
+      zwitch: 2.0.4
 
   unist-util-stringify-position@4.0.0:
     dependencies:

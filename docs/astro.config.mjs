@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import oembed from 'astro-oembed-integration';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,6 +14,7 @@ export default defineConfig({
     },
   },
   integrations: [
+    ...oembed(),
     starlight({
       title: 'astro-oembed',
       social: [
@@ -27,6 +29,10 @@ export default defineConfig({
         {
           label: 'Components',
           items: [{ autogenerate: { directory: 'components' } }],
+        },
+        {
+          label: 'Integrations',
+          items: [{ autogenerate: { directory: 'integrations' } }],
         },
         {
           label: 'Reference',

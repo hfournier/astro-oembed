@@ -1,0 +1,90 @@
+---
+title: Auto-embed URLs in MDX
+description: Learn how to set up and use the astro-oembed integration to automatically convert standalone URLs to rich media embeds in your MDX content.
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+The `astro-oembed-integration` package automatically converts standalone oEmbed URLs in
+your MDX files into `<Oembed>` components at build time — no manual imports required.
+
+## Installation
+
+<Tabs>
+  <TabItem label="npm">
+    ```sh
+    npm install astro-oembed astro-oembed-integration
+    ```
+  </TabItem>
+  <TabItem label="pnpm">
+    ```sh
+    pnpm add astro-oembed astro-oembed-integration
+    ```
+  </TabItem>
+  <TabItem label="Yarn">
+    ```sh
+    yarn add astro-oembed astro-oembed-integration
+    ```
+  </TabItem>
+</Tabs>
+
+## Setup
+
+Add the integration to your `astro.config.mjs` **before** `@astrojs/mdx` (or before Starlight,
+which registers MDX internally):
+
+```js ins={3,8}
+// astro.config.mjs
+import { defineConfig } from 'astro/config';
+import oembed from 'astro-oembed-integration';
+import mdx from '@astrojs/mdx';
+
+export default defineConfig({
+  integrations: [
+    ...oembed(),
+    mdx(),
+  ],
+});
+```
+
+:::note
+`oembed()` returns an array, so spread it with `...oembed()`. It must come **before** `mdx()` in the integrations array.
+:::
+
+## Usage
+
+With the integration enabled, any standalone oEmbed URL on its own line in an `.mdx` file is
+automatically converted to an `<Oembed>` component. No import needed.
+
+For example, this MDX will render a YouTube embed in place of the bare URL:
+
+```mdx ins={5,9}
+# My post
+
+Here is an embedded Bluesky post:
+
+https://bsky.app/profile/astro.build/post/3mlbttjkvzi2w
+
+Here is an embedded YouTube video:
+
+https://youtu.be/0mKNSwi7Wvk?t=39
+```
+
+Only URLs on their own line — forming a standalone paragraph with no surrounding text — are
+transformed. A URL embedded within a sentence will not be processed.
+
+A URL is also only converted when it matches a known oEmbed provider in the bundled
+[provider list](/reference/providers/). Unrecognised URLs remain as plain links.
+
+## Live example
+
+The above code example will render as the following in your Astro page:
+
+Here is an embedded Bluesky post:
+
+https://bsky.app/profile/astro.build/post/3mlbttjkvzi2w
+
+Here is an embedded YouTube video:
+
+https://youtu.be/0mKNSwi7Wvk?t=39
+

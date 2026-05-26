@@ -1,0 +1,42 @@
+{
+  "name": "astro-oembed-integration",
+  "version": "0.0.1",
+  "description": "Astro integration to automatically convert oEmbed URLs in Markdown files to embeds",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "remark-plugin.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hfournier/astro-oembed",
+    "directory": "packages/astro-oembed-integration"
+  },
+  "keywords": [
+    "astro",
+    "oembed",
+    "embed",
+    "integration",
+    "remark"
+  ],
+  "author": "hfournier",
+  "license": "MIT",
+  "bugs": "https://github.com/hfournier/astro-oembed/issues",
+  "homepage": "https://astro-oembed.netlify.app/integration",
+  "dependencies": {
+    "astro-oembed": "workspace:*",
+    "acorn": "^8.0.0",
+    "unist-util-select": "^5.1.0"
+  },
+  "peerDependencies": {
+    "astro": "^4.0.0 || ^5.0.0 || ^6.0.0"
+  },
+  "devDependencies": {
+    "astro": "^5.0.0",
+    "typescript": "^5.0.0",
+    "@types/unist": "^3.0.3"
+  }
+}
