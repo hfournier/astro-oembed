@@ -1,5 +1,13 @@
 # astro-oembed-integration
 
+## 0.1.3
+
+### Patch Changes
+
+- Added astro keywords
+- Updated dependencies
+  - astro-oembed@0.1.3
+
 ## 0.1.2
 
 ### Patch Changes
