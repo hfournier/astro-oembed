@@ -4,7 +4,7 @@ Embed any URL in your [Astro](https://astro.build/) site using the [oEmbed](http
 
 ## Documentation
 
-Check out the [astro-oembed documentation](https://astro-oembed.pages.dev/) to get started.
+Check out the [astro-oembed documentation](https://astro-oembed.netlify.app//) to get started.
 
 ## Project Structure
 
@@ -13,23 +13,24 @@ This is a pnpm monorepo. The publishable package lives under `packages/`, with a
 ```
 /
 ├── packages/
-│   └── astro-oembed/    ← the npm package
-├── demo/                ← Astro demo site for manual testing
-└── docs/                ← Starlight documentation site
+│   └── astro-oembed/               ← the npm package
+│   └── astro-oembed-intergations/  ← the npm package
+├── demo/                           ← Astro demo site for manual testing
+└── docs/                           ← Starlight documentation site
 ```
 
 ## Commands
 
 All commands are run from the root of the project:
 
-| Command                   | Action                               |
-| :------------------------ | :----------------------------------- |
-| `pnpm install`            | Install dependencies                 |
-| `pnpm test`               | Run the test suite                   |
-| `pnpm format`             | Format all files with Prettier       |
-| `pnpm lint`               | Lint source files with ESLint        |
-| `pnpm --filter docs dev`  | Start the docs dev server            |
-| `pnpm --filter demo dev`  | Start the demo dev server            |
+| Command                  | Action                         |
+| :----------------------- | :----------------------------- |
+| `pnpm install`           | Install dependencies           |
+| `pnpm test`              | Run the test suite             |
+| `pnpm format`            | Format all files with Prettier |
+| `pnpm lint`              | Lint source files with ESLint  |
+| `pnpm --filter docs dev` | Start the docs dev server      |
+| `pnpm --filter demo dev` | Start the demo dev server      |
 
 ## Contributing
 
