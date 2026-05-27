@@ -62,3 +62,7 @@ Full documentation at [astro-oembed.netlify.app/integration](https://astro-oembe
 ## License
 
 MIT
+
+## Credits
+
+This package was inpired by and borrows heavily from [Astro Embed Integration](https://github.com/delucis/astro-embed/tree/main/packages/astro-embed-integration)

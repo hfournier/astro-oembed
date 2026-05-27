@@ -38,3 +38,7 @@ Found a bug or want to improve something? See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 - Open a [new issue](https://github.com/hfournier/astro-oembed/issues/new) to report a bug or suggest a feature.
 - Submit a pull request with your changes.
+
+## Credits
+
+This package was inpired by and borrows heavily from [Astro Embed](https://github.com/delucis/astro-embed/tree/main)

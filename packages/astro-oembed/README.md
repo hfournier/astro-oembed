@@ -22,33 +22,33 @@ import { Oembed } from 'astro-oembed';
 
 ## Props
 
-| Prop               | Type     | Description                                                          |
-| :----------------- | :------- | :------------------------------------------------------------------- |
-| `url`              | `string` | **Required.** The URL to embed.                                      |
-| `poster`           | `string` | Override the thumbnail image URL shown before the embed loads.       |
-| `placeholderColor` | `string` | CSS color value for the placeholder background.                      |
-| `maxWidth`         | `number` | Maximum width hint passed to the oEmbed provider.                    |
-| `maxHeight`        | `number` | Maximum height hint passed to the oEmbed provider.                   |
-| `accessToken`      | `string` | Bearer token for providers that require authentication (e.g. Flickr).|
+| Prop               | Type     | Description                                                           |
+| :----------------- | :------- | :-------------------------------------------------------------------- |
+| `url`              | `string` | **Required.** The URL to embed.                                       |
+| `poster`           | `string` | Override the thumbnail image URL shown before the embed loads.        |
+| `placeholderColor` | `string` | CSS color value for the placeholder background.                       |
+| `maxWidth`         | `number` | Maximum width hint passed to the oEmbed provider.                     |
+| `maxHeight`        | `number` | Maximum height hint passed to the oEmbed provider.                    |
+| `accessToken`      | `string` | Bearer token for providers that require authentication (e.g. Flickr). |
 
 All standard HTML `div` attributes are also accepted and forwarded to the wrapper element.
 
 ## Render behaviour
 
-| oEmbed type | Output                                                              |
-| :---------- | :------------------------------------------------------------------ |
-| `video`     | `<lite-oembed>` custom element — loads the iframe on click          |
+| oEmbed type | Output                                                                  |
+| :---------- | :---------------------------------------------------------------------- |
+| `video`     | `<lite-oembed>` custom element — loads the iframe on click              |
 | `rich`      | `<lite-oembed>` custom element — activates script-based embeds on click |
-| `photo`     | Astro `<Image>` with the provider's image URL                       |
-| `link`      | Plain `<a>` with the provider's title                               |
+| `photo`     | Astro `<Image>` with the provider's image URL                           |
+| `link`      | Plain `<a>` with the provider's title                                   |
 
 If the URL has no matching provider or the oEmbed request fails, the component renders nothing (a warning is logged in dev mode).
 
 ## Exports
 
 ```ts
-import { Oembed } from 'astro-oembed';               // component
-import { fetchOembed } from 'astro-oembed';           // fetch helper
+import { Oembed } from 'astro-oembed'; // component
+import { fetchOembed } from 'astro-oembed'; // fetch helper
 import { findEndpointUrl } from 'astro-oembed/providers'; // provider lookup
 ```
 
@@ -76,3 +76,7 @@ Full documentation at [astro-oembed.netlify.app](https://astro-oembed.netlify.ap
 ## License
 
 MIT
+
+## Credits
+
+This package was inpired by and borrows heavily from [Astro Embed](https://github.com/delucis/astro-embed)
