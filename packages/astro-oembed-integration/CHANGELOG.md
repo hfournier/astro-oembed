@@ -1,5 +1,13 @@
 # astro-oembed-integration
 
+## 0.1.2
+
+### Patch Changes
+
+- Adds credits to astro-embed
+- Updated dependencies
+  - astro-oembed@0.1.2
+
 ## 0.1.1
 
 ### Patch Changes

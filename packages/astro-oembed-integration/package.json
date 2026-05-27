@@ -1,6 +1,6 @@
 {
   "name": "astro-oembed-integration",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Astro integration to automatically convert oEmbed URLs in Markdown files to embeds",
   "type": "module",
   "exports": {
