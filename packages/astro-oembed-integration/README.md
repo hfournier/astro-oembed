@@ -57,7 +57,7 @@ The import is injected automatically — you don't need to add it yourself.
 
 ## Documentation
 
-Full documentation at [astro-oembed.netlify.app/integration](https://astro-oembed.netlify.app/integration).
+Full documentation at [astro-oembed.netlify.app/integration](https://astro-oembed.netlify.app/integrations).
 
 ## License
 
