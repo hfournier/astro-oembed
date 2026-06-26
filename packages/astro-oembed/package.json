@@ -1,6 +1,6 @@
 {
   "name": "astro-oembed",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Astro component for embedding arbitrary URLs via the oEmbed protocol",
   "type": "module",
   "exports": {
