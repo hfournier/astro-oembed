@@ -1,10 +1,12 @@
-﻿[
+[
   {
     "provider_name": "23HQ",
     "provider_url": "http://www.23hq.com",
     "endpoints": [
       {
-        "schemes": ["http://www.23hq.com/*/photo/*"],
+        "schemes": [
+          "http://www.23hq.com/*/photo/*"
+        ],
         "url": "http://www.23hq.com/23/oembed"
       }
     ]
@@ -14,7 +16,9 @@
     "provider_url": "https://3q.video/",
     "endpoints": [
       {
-        "schemes": ["https://playout.3qsdn.com/embed/*"],
+        "schemes": [
+          "https://playout.3qsdn.com/embed/*"
+        ],
         "url": "https://playout.3qsdn.com/oembed",
         "discovery": true
       }
@@ -25,7 +29,9 @@
     "provider_url": "https://abraia.me",
     "endpoints": [
       {
-        "schemes": ["https://store.abraia.me/*"],
+        "schemes": [
+          "https://store.abraia.me/*"
+        ],
         "url": "https://api.abraia.me/oembed",
         "discovery": true
       }
@@ -36,10 +42,14 @@
     "provider_url": "https://embed.acast.com",
     "endpoints": [
       {
-        "schemes": ["https://play.acast.com/s/*"],
+        "schemes": [
+          "https://play.acast.com/s/*"
+        ],
         "url": "https://oembed.acast.com/v1/embed-player",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -48,7 +58,9 @@
     "provider_url": "https://secure.actblue.com",
     "endpoints": [
       {
-        "schemes": ["https://secure.actblue.com/donate/*"],
+        "schemes": [
+          "https://secure.actblue.com/donate/*"
+        ],
         "url": "https://secure.actblue.com/cf/oembed"
       }
     ]
@@ -58,10 +70,14 @@
     "provider_url": "https://adilo.bigcommand.com",
     "endpoints": [
       {
-        "schemes": ["https://adilo.bigcommand.com/watch/*"],
+        "schemes": [
+          "https://adilo.bigcommand.com/watch/*"
+        ],
         "url": "https://adilo.bigcommand.com/web/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -87,9 +103,13 @@
     "provider_url": "https://altium.com",
     "endpoints": [
       {
-        "schemes": ["https://altium.com/viewer/*"],
+        "schemes": [
+          "https://altium.com/viewer/*"
+        ],
         "url": "https://viewer.altium.com/shell/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -103,7 +123,9 @@
           "https://app.altrulabs.com/player/*"
         ],
         "url": "https://api.altrulabs.com/api/v1/social/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -155,7 +177,9 @@
     "provider_url": "http://animoto.com/",
     "endpoints": [
       {
-        "schemes": ["http://animoto.com/play/*"],
+        "schemes": [
+          "http://animoto.com/play/*"
+        ],
         "url": "http://animoto.com/oembeds/create"
       }
     ]
@@ -165,7 +189,10 @@
     "provider_url": "https://anniemusic.app",
     "endpoints": [
       {
-        "schemes": ["https://anniemusic.app/t/*", "https://anniemusic.app/p/*"],
+        "schemes": [
+          "https://anniemusic.app/t/*",
+          "https://anniemusic.app/p/*"
+        ],
         "url": "https://api.anniemusic.app/api/v1/oembed"
       }
     ]
@@ -175,10 +202,15 @@
     "provider_url": "https://appforcestudio.com",
     "endpoints": [
       {
-        "schemes": ["https://appforcestudio.com/playground/*"],
+        "schemes": [
+          "https://appforcestudio.com/playground/*"
+        ],
         "url": "https://us-central1-themerax-cc903.cloudfunctions.net/playgroundApi/oembed",
         "discovery": true,
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -187,10 +219,14 @@
     "provider_url": "https://podcasts.apple.com",
     "endpoints": [
       {
-        "schemes": ["https://podcasts.apple.com/*"],
+        "schemes": [
+          "https://podcasts.apple.com/*"
+        ],
         "url": "https://podcasts.apple.com/api/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -199,7 +235,9 @@
     "provider_url": "https://storymaps.arcgis.com",
     "endpoints": [
       {
-        "schemes": ["https://storymaps.arcgis.com/stories/*"],
+        "schemes": [
+          "https://storymaps.arcgis.com/stories/*"
+        ],
         "url": "https://storymaps.arcgis.com/oembed",
         "discovery": true
       }
@@ -210,7 +248,9 @@
     "provider_url": "https://app.archivos.digital",
     "endpoints": [
       {
-        "schemes": ["https://app.archivos.digital/app/view/*"],
+        "schemes": [
+          "https://app.archivos.digital/app/view/*"
+        ],
         "url": "https://app.archivos.digital/oembed/"
       }
     ]
@@ -274,7 +314,10 @@
           "https://audioboom.com/episodes/*"
         ],
         "url": "https://audioboom.com/publishing/oembed.{format}",
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -312,10 +355,14 @@
     "provider_url": "https://audiomeans.fr",
     "endpoints": [
       {
-        "schemes": ["https://podcasts.audiomeans.fr/*"],
+        "schemes": [
+          "https://podcasts.audiomeans.fr/*"
+        ],
         "url": "https://podcasts.audiomeans.fr/services/oembed",
         "discovery": false,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -324,10 +371,14 @@
     "provider_url": "https://audius.co",
     "endpoints": [
       {
-        "schemes": ["https://audius.co/*"],
+        "schemes": [
+          "https://audius.co/*"
+        ],
         "url": "https://audius.co/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -353,7 +404,9 @@
     "provider_url": "https://balsamiq.cloud/",
     "endpoints": [
       {
-        "schemes": ["https://balsamiq.cloud/*"],
+        "schemes": [
+          "https://balsamiq.cloud/*"
+        ],
         "url": "https://balsamiq.cloud/oembed",
         "discovery": true
       }
@@ -364,7 +417,9 @@
     "provider_url": "http://beams.fm",
     "endpoints": [
       {
-        "schemes": ["https://beams.fm/*"],
+        "schemes": [
+          "https://beams.fm/*"
+        ],
         "url": "https://api.beams.fm/oEmbed",
         "discovery": true
       }
@@ -390,7 +445,9 @@
           "https://www.behance.net/*/services/*/*"
         ],
         "url": "https://www.behance.net/services/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -399,21 +456,31 @@
     "provider_url": "http://beta.quellensuche.de",
     "endpoints": [
       {
-        "schemes": ["http://beta.quellensuche.de/*"],
+        "schemes": [
+          "http://beta.quellensuche.de/*"
+        ],
         "url": "http://beta.quellensuche.de/api/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
   {
-    "provider_name": "biqnetwork",
-    "provider_url": "https://biqapp.com/",
+    "provider_name": "biqapp",
+    "provider_url": "https://biqapp.net/",
     "endpoints": [
       {
-        "schemes": ["https://cloud.biqapp.com/*"],
-        "url": "https://biqapp.com/api/v1/video/oembed",
-        "discovery": true
+        "schemes": [
+          "https://biqapp.net/f/*",
+          "https://www.biqapp.net/f/*"
+        ],
+        "url": "https://biqapp.net/api/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -460,7 +527,9 @@
     "provider_url": "https://bsky.app",
     "endpoints": [
       {
-        "schemes": ["https://bsky.app/profile/*/post/*"],
+        "schemes": [
+          "https://bsky.app/profile/*/post/*"
+        ],
         "url": "https://embed.bsky.app/oembed",
         "discovery": true
       }
@@ -471,9 +540,14 @@
     "provider_url": "https://www.bookingmood.com",
     "endpoints": [
       {
-        "schemes": ["https://www.bookingmood.com/embed/*/*"],
+        "schemes": [
+          "https://www.bookingmood.com/embed/*/*"
+        ],
         "url": "https://bookingmood.com/api/oembed",
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -496,10 +570,15 @@
     "provider_url": "https://boxofficebuz.com",
     "endpoints": [
       {
-        "schemes": ["https://boxofficebuz.com/embed/video/*"],
+        "schemes": [
+          "https://boxofficebuz.com/embed/video/*"
+        ],
         "url": "https://api.boxofficebuz.com/v2/oembed",
         "discovery": true,
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -515,7 +594,9 @@
         ],
         "url": "https://oembed.brightcove.com/",
         "discovery": false,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -524,7 +605,9 @@
     "provider_url": "https://view.briovr.com/",
     "endpoints": [
       {
-        "schemes": ["https://view.briovr.com/api/v1/worlds/oembed/*"],
+        "schemes": [
+          "https://view.briovr.com/api/v1/worlds/oembed/*"
+        ],
         "url": "https://view.briovr.com/api/v1/worlds/oembed/"
       }
     ]
@@ -557,7 +640,9 @@
           "http://video.bunnycdn.com/*"
         ],
         "url": "https://video.bunnycdn.com/OEmbed",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -567,9 +652,13 @@
     "provider_url": "https://buttondown.email/",
     "endpoints": [
       {
-        "schemes": ["https://buttondown.email/*"],
+        "schemes": [
+          "https://buttondown.email/*"
+        ],
         "url": "https://buttondown.email/embed",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -579,7 +668,9 @@
     "provider_url": "https://cmc.byzart.eu",
     "endpoints": [
       {
-        "schemes": ["https://cmc.byzart.eu/files/*"],
+        "schemes": [
+          "https://cmc.byzart.eu/files/*"
+        ],
         "url": "https://cmc.byzart.eu/oembed/",
         "discovery": false
       }
@@ -590,7 +681,9 @@
     "provider_url": "https://cacoo.com",
     "endpoints": [
       {
-        "schemes": ["https://cacoo.com/diagrams/*"],
+        "schemes": [
+          "https://cacoo.com/diagrams/*"
+        ],
         "url": "http://cacoo.com/oembed.{format}"
       }
     ]
@@ -600,7 +693,9 @@
     "provider_url": "https://www.canva.com",
     "endpoints": [
       {
-        "schemes": ["https://www.canva.com/design/*/view"],
+        "schemes": [
+          "https://www.canva.com/design/*/view"
+        ],
         "url": "https://www.canva.com/_oembed",
         "discovery": true
       }
@@ -611,10 +706,15 @@
     "provider_url": "https://carbon.music/",
     "endpoints": [
       {
-        "schemes": ["https://carbon.music/*", "https://www.carbon.music/*"],
+        "schemes": [
+          "https://carbon.music/*",
+          "https://www.carbon.music/*"
+        ],
         "url": "https://carbon.music/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -637,7 +737,9 @@
     "provider_url": "https://www.castmake-ai.com",
     "endpoints": [
       {
-        "schemes": ["https://www.castmake-ai.com/c/*/episodes/*"],
+        "schemes": [
+          "https://www.castmake-ai.com/c/*/episodes/*"
+        ],
         "url": "http://castmake-ai.com/api/embed",
         "discovery": true
       }
@@ -648,9 +750,13 @@
     "provider_url": "http://img.catbo.at/",
     "endpoints": [
       {
-        "schemes": ["http://img.catbo.at/*"],
+        "schemes": [
+          "http://img.catbo.at/*"
+        ],
         "url": "http://img.catbo.at/oembed.json",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -659,10 +765,14 @@
     "provider_url": "https://www.celero.io",
     "endpoints": [
       {
-        "schemes": ["https://embeds.celero.io/*"],
+        "schemes": [
+          "https://embeds.celero.io/*"
+        ],
         "url": "https://api.celero.io/api/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -671,7 +781,10 @@
     "provider_url": "http://www.ceros.com/",
     "endpoints": [
       {
-        "schemes": ["http://view.ceros.com/*", "https://view.ceros.com/*"],
+        "schemes": [
+          "http://view.ceros.com/*",
+          "https://view.ceros.com/*"
+        ],
         "url": "http://view.ceros.com/oembed",
         "discovery": true
       }
@@ -698,7 +811,9 @@
     "provider_url": "http://www.chartblocks.com/",
     "endpoints": [
       {
-        "schemes": ["http://public.chartblocks.com/c/*"],
+        "schemes": [
+          "http://public.chartblocks.com/c/*"
+        ],
         "url": "http://embed.chartblocks.com/1.0/oembed"
       }
     ]
@@ -708,7 +823,9 @@
     "provider_url": "http://www.chirbit.com/",
     "endpoints": [
       {
-        "schemes": ["http://chirb.it/*"],
+        "schemes": [
+          "http://chirb.it/*"
+        ],
         "url": "http://chirb.it/oembed.{format}",
         "discovery": true
       }
@@ -750,7 +867,9 @@
     "provider_url": "https://www.circuitlab.com/",
     "endpoints": [
       {
-        "schemes": ["https://www.circuitlab.com/circuit/*"],
+        "schemes": [
+          "https://www.circuitlab.com/circuit/*"
+        ],
         "url": "https://www.circuitlab.com/circuit/oembed/",
         "discovery": true
       }
@@ -775,7 +894,9 @@
     "provider_url": "https://clueso.io",
     "endpoints": [
       {
-        "schemes": ["https://clueso.site/*"],
+        "schemes": [
+          "https://clueso.site/*"
+        ],
         "url": "https://clueso.site/api/oembed",
         "discovery": true
       }
@@ -786,7 +907,10 @@
     "provider_url": "http://clyp.it/",
     "endpoints": [
       {
-        "schemes": ["http://clyp.it/*", "http://clyp.it/playlist/*"],
+        "schemes": [
+          "http://clyp.it/*",
+          "http://clyp.it/playlist/*"
+        ],
         "url": "http://api.clyp.it/oembed/",
         "discovery": true
       }
@@ -797,7 +921,9 @@
     "provider_url": "https://ilovecoco.video",
     "endpoints": [
       {
-        "schemes": ["https://app.ilovecoco.video/*/embed"],
+        "schemes": [
+          "https://app.ilovecoco.video/*/embed"
+        ],
         "url": "https://app.ilovecoco.video/api/oembed.{format}",
         "discovery": true
       }
@@ -808,7 +934,9 @@
     "provider_url": "http://www.codehs.com",
     "endpoints": [
       {
-        "schemes": ["https://codehs.com/editor/share_abacus/*"],
+        "schemes": [
+          "https://codehs.com/editor/share_abacus/*"
+        ],
         "url": "https://codehs.com/api/sharedprogram/1/oembed/",
         "discovery": true
       }
@@ -819,7 +947,10 @@
     "provider_url": "https://codepen.io",
     "endpoints": [
       {
-        "schemes": ["http://codepen.io/*", "https://codepen.io/*"],
+        "schemes": [
+          "http://codepen.io/*",
+          "https://codepen.io/*"
+        ],
         "url": "https://codepen.io/api/oembed"
       }
     ]
@@ -858,7 +989,9 @@
     "provider_url": "http://www.collegehumor.com/",
     "endpoints": [
       {
-        "schemes": ["http://www.collegehumor.com/video/*"],
+        "schemes": [
+          "http://www.collegehumor.com/video/*"
+        ],
         "url": "http://www.collegehumor.com/oembed.{format}",
         "discovery": true
       }
@@ -869,7 +1002,9 @@
     "provider_url": "https://commaful.com",
     "endpoints": [
       {
-        "schemes": ["https://commaful.com/play/*"],
+        "schemes": [
+          "https://commaful.com/play/*"
+        ],
         "url": "https://commaful.com/api/oembed/"
       }
     ]
@@ -879,7 +1014,10 @@
     "provider_url": "http://coub.com/",
     "endpoints": [
       {
-        "schemes": ["http://coub.com/view/*", "http://coub.com/embed/*"],
+        "schemes": [
+          "http://coub.com/view/*",
+          "http://coub.com/embed/*"
+        ],
         "url": "http://coub.com/api/oembed.{format}"
       }
     ]
@@ -889,7 +1027,9 @@
     "provider_url": "http://crowdranking.com",
     "endpoints": [
       {
-        "schemes": ["http://crowdranking.com/*/*"],
+        "schemes": [
+          "http://crowdranking.com/*/*"
+        ],
         "url": "http://crowdranking.com/api/oembed.{format}"
       }
     ]
@@ -899,7 +1039,9 @@
     "provider_url": "https://crumb.sh",
     "endpoints": [
       {
-        "schemes": ["https://crumb.sh/*"],
+        "schemes": [
+          "https://crumb.sh/*"
+        ],
         "url": "https://crumb.sh/oembed/"
       }
     ]
@@ -909,7 +1051,9 @@
     "provider_url": "https://cueup.io",
     "endpoints": [
       {
-        "schemes": ["https://cueup.io/user/*/sounds/*"],
+        "schemes": [
+          "https://cueup.io/user/*/sounds/*"
+        ],
         "url": "https://gql.cueup.io/oembed"
       }
     ]
@@ -919,9 +1063,13 @@
     "provider_url": "https://curated.co/",
     "endpoints": [
       {
-        "schemes": ["https://*.curated.co/*"],
+        "schemes": [
+          "https://*.curated.co/*"
+        ],
         "url": "https://api.curated.co/oembed",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -931,7 +1079,9 @@
     "provider_url": "http://customerdb.com/",
     "endpoints": [
       {
-        "schemes": ["https://app.customerdb.com/share/*"],
+        "schemes": [
+          "https://app.customerdb.com/share/*"
+        ],
         "url": "https://app.customerdb.com/embed"
       }
     ]
@@ -941,10 +1091,16 @@
     "provider_url": "https://www.dadan.io",
     "endpoints": [
       {
-        "schemes": ["https://app.dadan.io/*", "https://stage.dadan.io/*"],
+        "schemes": [
+          "https://app.dadan.io/*",
+          "https://stage.dadan.io/*"
+        ],
         "url": "https://app.dadan.io/api/video/oembed",
         "discovery": true,
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -967,7 +1123,9 @@
     "provider_url": "https://dalexni.com/",
     "endpoints": [
       {
-        "schemes": ["https://dalexni.com/i/*"],
+        "schemes": [
+          "https://dalexni.com/i/*"
+        ],
         "url": "https://dalexni.com/oembed/",
         "discovery": true
       }
@@ -978,7 +1136,9 @@
     "provider_url": "http://www.datawrapper.de",
     "endpoints": [
       {
-        "schemes": ["https://datawrapper.dwcdn.net/*"],
+        "schemes": [
+          "https://datawrapper.dwcdn.net/*"
+        ],
         "url": "https://api.datawrapper.de/v3/oembed/",
         "discovery": true
       }
@@ -989,10 +1149,15 @@
     "provider_url": "https://demofly.ai/",
     "endpoints": [
       {
-        "schemes": ["https://app.demofly.ai/s/*", "https://demofly.ai/s/*"],
+        "schemes": [
+          "https://app.demofly.ai/s/*",
+          "https://demofly.ai/s/*"
+        ],
         "url": "https://app.demofly.ai/api/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1001,7 +1166,9 @@
     "provider_url": "https://www.deseret.com",
     "endpoints": [
       {
-        "schemes": ["https://*.deseret.com/*"],
+        "schemes": [
+          "https://*.deseret.com/*"
+        ],
         "url": "https://embed.deseret.com/"
       }
     ]
@@ -1054,7 +1221,9 @@
           "http://*.docdroid.com/*"
         ],
         "url": "https://www.docdroid.net/api/oembed",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -1072,7 +1241,9 @@
         ],
         "url": "https://www.docswell.com/service/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1081,7 +1252,9 @@
     "provider_url": "https://www.documentcloud.org",
     "endpoints": [
       {
-        "schemes": ["https://www.documentcloud.org/documents/*"],
+        "schemes": [
+          "https://www.documentcloud.org/documents/*"
+        ],
         "url": "https://api.www.documentcloud.org/api/oembed",
         "discovery": true
       }
@@ -1092,7 +1265,9 @@
     "provider_url": "http://dotsub.com/",
     "endpoints": [
       {
-        "schemes": ["http://dotsub.com/view/*"],
+        "schemes": [
+          "http://dotsub.com/view/*"
+        ],
         "url": "http://dotsub.com/services/oembed"
       }
     ]
@@ -1102,7 +1277,9 @@
     "provider_url": "https://dreambroker.com",
     "endpoints": [
       {
-        "schemes": ["https://www.dreambroker.com/channel/*/*"],
+        "schemes": [
+          "https://www.dreambroker.com/channel/*/*"
+        ],
         "url": "https://dreambroker.com/channel/oembed",
         "discovery": true
       }
@@ -1113,7 +1290,9 @@
     "provider_url": "https://d.tube/",
     "endpoints": [
       {
-        "schemes": ["https://d.tube/v/*"],
+        "schemes": [
+          "https://d.tube/v/*"
+        ],
         "url": "https://api.d.tube/oembed",
         "discovery": true
       }
@@ -1124,9 +1303,14 @@
     "provider_url": "https://echoeshq.com",
     "endpoints": [
       {
-        "schemes": ["http://app.echoeshq.com/embed/*"],
+        "schemes": [
+          "http://app.echoeshq.com/embed/*"
+        ],
         "url": "https://api.echoeshq.com/oembed",
-        "formats": ["json", "xml"],
+        "formats": [
+          "json",
+          "xml"
+        ],
         "discovery": true
       }
     ]
@@ -1150,7 +1334,9 @@
     "provider_url": "http://egliseinfo.catholique.fr/",
     "endpoints": [
       {
-        "schemes": ["http://egliseinfo.catholique.fr/*"],
+        "schemes": [
+          "http://egliseinfo.catholique.fr/*"
+        ],
         "url": "http://egliseinfo.catholique.fr/api/oembed",
         "discovery": true
       }
@@ -1161,7 +1347,9 @@
     "provider_url": "https://elevenlabs.io/",
     "endpoints": [
       {
-        "schemes": ["https://elevenlabs.io/*"],
+        "schemes": [
+          "https://elevenlabs.io/*"
+        ],
         "url": "https://elevenlabs.io/next/oembed",
         "discovery": true
       }
@@ -1172,7 +1360,9 @@
     "provider_url": "https://embases.com/",
     "endpoints": [
       {
-        "schemes": ["https://www.embases.com/e/*"],
+        "schemes": [
+          "https://www.embases.com/e/*"
+        ],
         "url": "https://www.embases.com/api/oembed",
         "discovery": true
       }
@@ -1183,7 +1373,9 @@
     "provider_url": "https://embedery.com/",
     "endpoints": [
       {
-        "schemes": ["https://embedery.com/widget/*"],
+        "schemes": [
+          "https://embedery.com/widget/*"
+        ],
         "url": "https://embedery.com/api/oembed",
         "discovery": true
       }
@@ -1194,7 +1386,9 @@
     "provider_url": "https://www.ethfiddle.com/",
     "endpoints": [
       {
-        "schemes": ["https://ethfiddle.com/*"],
+        "schemes": [
+          "https://ethfiddle.com/*"
+        ],
         "url": "https://ethfiddle.com/services/oembed/",
         "discovery": true
       }
@@ -1235,7 +1429,9 @@
     "provider_url": "https://everwall.com",
     "endpoints": [
       {
-        "schemes": ["https://cdn.everwall.com/hubs/iframe/*"],
+        "schemes": [
+          "https://cdn.everwall.com/hubs/iframe/*"
+        ],
         "url": "https://cdn.everwall.com/hubs/oembed",
         "discovery": true
       }
@@ -1260,7 +1456,10 @@
     "provider_url": "https://eyrie.io/",
     "endpoints": [
       {
-        "schemes": ["https://eyrie.io/board/*", "https://eyrie.io/sparkfun/*"],
+        "schemes": [
+          "https://eyrie.io/board/*",
+          "https://eyrie.io/sparkfun/*"
+        ],
         "url": "https://eyrie.io/v1/oembed",
         "discovery": true
       }
@@ -1295,7 +1494,9 @@
         "discovery": false
       },
       {
-        "schemes": ["https://www.facebook.com/*"],
+        "schemes": [
+          "https://www.facebook.com/*"
+        ],
         "url": "https://graph.facebook.com/v16.0/oembed_page",
         "discovery": false
       }
@@ -1306,9 +1507,13 @@
     "provider_url": "https://app.getfader.com",
     "endpoints": [
       {
-        "schemes": ["https://app.getfader.com/projects/*/publish"],
+        "schemes": [
+          "https://app.getfader.com/projects/*/publish"
+        ],
         "url": "https://app.getfader.com/api/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1325,6 +1530,19 @@
           "https://faithlifetv.com/media/resource/*/*"
         ],
         "url": "https://faithlifetv.com/api/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "FazenHaus",
+    "provider_url": "https://haus.fazen.co/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://haus.fazen.co/embed/music/*"
+        ],
+        "url": "https://haus.fazen.co/api/oembed",
         "discovery": true
       }
     ]
@@ -1353,10 +1571,15 @@
     "provider_url": "https://filestage.io/",
     "endpoints": [
       {
-        "schemes": ["https://app.filestage.io/step/**"],
+        "schemes": [
+          "https://app.filestage.io/step/**"
+        ],
         "url": "https://app.filestage.io/oembed",
         "discovery": true,
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -1379,7 +1602,9 @@
     "provider_url": "https://www.fite.tv/",
     "endpoints": [
       {
-        "schemes": ["https://www.fite.tv/watch/*"],
+        "schemes": [
+          "https://www.fite.tv/watch/*"
+        ],
         "url": "https://www.fite.tv/oembed",
         "discovery": true
       }
@@ -1390,7 +1615,10 @@
     "provider_url": "https://flat.io",
     "endpoints": [
       {
-        "schemes": ["https://flat.io/score/*", "https://*.flat.io/score/*"],
+        "schemes": [
+          "https://flat.io/score/*",
+          "https://*.flat.io/score/*"
+        ],
         "url": "https://flat.io/services/oembed",
         "discovery": true
       }
@@ -1436,7 +1664,10 @@
     "endpoints": [
       {
         "url": "https://flowhub.org/o/embed",
-        "schemes": ["https://flowhub.org/f/*", "https://flowhub.org/s/*"],
+        "schemes": [
+          "https://flowhub.org/f/*",
+          "https://flowhub.org/s/*"
+        ],
         "discovery": true
       }
     ]
@@ -1460,9 +1691,13 @@
     "provider_url": "https://form-data.com",
     "endpoints": [
       {
-        "schemes": ["https://forms.form-data.com/*"],
+        "schemes": [
+          "https://forms.form-data.com/*"
+        ],
         "url": "https://forms.form-data.com/api/oembed",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -1485,7 +1720,9 @@
     "provider_url": "https://framatube.org/",
     "endpoints": [
       {
-        "schemes": ["https://framatube.org/w/*"],
+        "schemes": [
+          "https://framatube.org/w/*"
+        ],
         "url": "https://framatube.org/services/oembed"
       }
     ]
@@ -1495,7 +1732,10 @@
     "provider_url": "https://framebuzz.com/",
     "endpoints": [
       {
-        "schemes": ["http://framebuzz.com/v/*", "https://framebuzz.com/v/*"],
+        "schemes": [
+          "http://framebuzz.com/v/*",
+          "https://framebuzz.com/v/*"
+        ],
         "url": "https://framebuzz.com/oembed/",
         "discovery": true
       }
@@ -1506,7 +1746,10 @@
     "provider_url": "https://www.framer.com",
     "endpoints": [
       {
-        "schemes": ["https://framer.com/share/*", "https://framer.com/embed/*"],
+        "schemes": [
+          "https://framer.com/share/*",
+          "https://framer.com/embed/*"
+        ],
         "url": "https://api.framer.com/web/oembed",
         "discovery": true
       }
@@ -1576,9 +1819,13 @@
     "provider_url": "http://www.gettyimages.com/",
     "endpoints": [
       {
-        "schemes": ["http://gty.im/*"],
+        "schemes": [
+          "http://gty.im/*"
+        ],
         "url": "http://embed.gettyimages.com/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1588,7 +1835,9 @@
     "endpoints": [
       {
         "url": "https://www.gifnote.com/services/oembed",
-        "schemes": ["https://www.gifnote.com/play/*"],
+        "schemes": [
+          "https://www.gifnote.com/play/*"
+        ],
         "discovery": true
       }
     ]
@@ -1624,7 +1873,10 @@
     "provider_url": "https://www.gmetri.com/",
     "endpoints": [
       {
-        "schemes": ["https://view.gmetri.com/*", "https://*.gmetri.com/*"],
+        "schemes": [
+          "https://view.gmetri.com/*",
+          "https://*.gmetri.com/*"
+        ],
         "url": "https://embed.gmetri.com/oembed/",
         "discovery": true
       }
@@ -1635,9 +1887,13 @@
     "provider_url": "https://www.gong.io/",
     "endpoints": [
       {
-        "schemes": ["https://app.gong.io/call?id=*"],
+        "schemes": [
+          "https://app.gong.io/call?id=*"
+        ],
         "url": "https://app.gong.io/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1646,10 +1902,14 @@
     "provider_url": "https://www.good-for-job.jp",
     "endpoints": [
       {
-        "schemes": ["https://www.good-for-job.jp/slides/*"],
+        "schemes": [
+          "https://www.good-for-job.jp/slides/*"
+        ],
         "url": "https://www.good-for-job.jp/api/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1672,7 +1932,9 @@
     "provider_url": "https://gtchannel.com",
     "endpoints": [
       {
-        "schemes": ["https://gtchannel.com/watch/*"],
+        "schemes": [
+          "https://gtchannel.com/watch/*"
+        ],
         "url": "https://api.luminery.com/oembed",
         "discovery": true
       }
@@ -1697,7 +1959,9 @@
     "provider_url": "https://gw2fashions.com/",
     "endpoints": [
       {
-        "schemes": ["https://gw2fashions.com/fashion/*"],
+        "schemes": [
+          "https://gw2fashions.com/fashion/*"
+        ],
         "url": "https://gw2fashions.com/fashion/oembed",
         "discovery": true
       }
@@ -1708,9 +1972,13 @@
     "provider_url": "https://gyazo.com",
     "endpoints": [
       {
-        "schemes": ["https://gyazo.com/*"],
+        "schemes": [
+          "https://gyazo.com/*"
+        ],
         "url": "https://api.gyazo.com/api/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1719,7 +1987,9 @@
     "provider_url": "https://hash.ai",
     "endpoints": [
       {
-        "schemes": ["https://core.hash.ai/@*"],
+        "schemes": [
+          "https://core.hash.ai/@*"
+        ],
         "url": "https://api.hash.ai/oembed",
         "discovery": false
       }
@@ -1730,7 +2000,10 @@
     "provider_url": "https://hearthis.at/",
     "endpoints": [
       {
-        "schemes": ["https://hearthis.at/*/*/", "https://hearthis.at/*/set/*/"],
+        "schemes": [
+          "https://hearthis.at/*/*/",
+          "https://hearthis.at/*/set/*/"
+        ],
         "url": "https://hearthis.at/oembed/?format=json",
         "discovery": true
       }
@@ -1741,7 +2014,9 @@
     "provider_url": "https://helenenglish.education/",
     "endpoints": [
       {
-        "schemes": ["https://helenenglish.education/widget*"],
+        "schemes": [
+          "https://helenenglish.education/widget*"
+        ],
         "url": "https://helenenglish.education/embed",
         "discovery": true
       }
@@ -1767,9 +2042,14 @@
     "provider_url": "https://www.hihaho.com",
     "endpoints": [
       {
-        "schemes": ["https://player.hihaho.com/*"],
+        "schemes": [
+          "https://player.hihaho.com/*"
+        ],
         "url": "https://player.hihaho.com/services/oembed",
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -1778,7 +2058,10 @@
     "provider_url": "https://hippovideo.io",
     "endpoints": [
       {
-        "schemes": ["http://*.hippovideo.io/*", "https://*.hippovideo.io/*"],
+        "schemes": [
+          "http://*.hippovideo.io/*",
+          "https://*.hippovideo.io/*"
+        ],
         "url": "https://www.hippovideo.io/services/oembed",
         "discovery": true
       }
@@ -1801,7 +2084,10 @@
         ],
         "url": "https://app.hivo.com.au/api/drupal/oembed",
         "discovery": true,
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -1810,7 +2096,10 @@
     "provider_url": "https://homey.app",
     "endpoints": [
       {
-        "schemes": ["https://homey.app/f/*", "https://homey.app/*/flow/*"],
+        "schemes": [
+          "https://homey.app/f/*",
+          "https://homey.app/*/flow/*"
+        ],
         "url": "https://homey.app/api/oembed/flow",
         "discovery": true
       }
@@ -1821,7 +2110,9 @@
     "provider_url": "https://www.hopvue.com",
     "endpoints": [
       {
-        "schemes": ["https://*.hopvue.com/*"],
+        "schemes": [
+          "https://*.hopvue.com/*"
+        ],
         "url": "https://portal.hopvue.com/api/oembed/",
         "discovery": true
       }
@@ -1832,7 +2123,9 @@
     "provider_url": "http://huffduffer.com",
     "endpoints": [
       {
-        "schemes": ["http://huffduffer.com/*/*"],
+        "schemes": [
+          "http://huffduffer.com/*/*"
+        ],
         "url": "http://huffduffer.com/oembed"
       }
     ]
@@ -1842,7 +2135,9 @@
     "provider_url": "http://www.hulu.com/",
     "endpoints": [
       {
-        "schemes": ["http://www.hulu.com/watch/*"],
+        "schemes": [
+          "http://www.hulu.com/watch/*"
+        ],
         "url": "http://www.hulu.com/api/oembed.{format}"
       }
     ]
@@ -1852,7 +2147,9 @@
     "provider_url": "https://icosa.gallery",
     "endpoints": [
       {
-        "schemes": ["https://icosa.gallery/view/*"],
+        "schemes": [
+          "https://icosa.gallery/view/*"
+        ],
         "url": "https://api.icosa.gallery/v1/oembed",
         "discovery": true
       }
@@ -1863,7 +2160,9 @@
     "provider_url": "https://ideamapper.com/",
     "endpoints": [
       {
-        "schemes": ["https://oembed.ideamapper.com/*"],
+        "schemes": [
+          "https://oembed.ideamapper.com/*"
+        ],
         "url": "https://oembed.ideamapper.com/oembed",
         "discovery": true
       }
@@ -1874,9 +2173,13 @@
     "provider_url": "https://idomoo.com/",
     "endpoints": [
       {
-        "schemes": ["https://*.idomoo.com/*"],
+        "schemes": [
+          "https://*.idomoo.com/*"
+        ],
         "url": "https://oembed.idomoo.com/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1885,7 +2188,9 @@
     "provider_url": "http://www.iFixit.com",
     "endpoints": [
       {
-        "schemes": ["http://www.ifixit.com/Guide/View/*"],
+        "schemes": [
+          "http://www.ifixit.com/Guide/View/*"
+        ],
         "url": "http://www.ifixit.com/Embed"
       }
     ]
@@ -1895,7 +2200,9 @@
     "provider_url": "http://www.ifttt.com/",
     "endpoints": [
       {
-        "schemes": ["http://ifttt.com/recipes/*"],
+        "schemes": [
+          "http://ifttt.com/recipes/*"
+        ],
         "url": "http://www.ifttt.com/oembed/",
         "discovery": true
       }
@@ -1920,7 +2227,9 @@
     "provider_url": "https://www.iheart.com",
     "endpoints": [
       {
-        "schemes": ["https://www.iheart.com/podcast/*/*"],
+        "schemes": [
+          "https://www.iheart.com/podcast/*/*"
+        ],
         "url": "https://www.iheart.com/oembed",
         "discovery": true
       }
@@ -1931,9 +2240,14 @@
     "provider_url": "https://imenupro.com",
     "endpoints": [
       {
-        "schemes": ["http://qr.imenupro.com/*", "https://qr.imenupro.com/*"],
+        "schemes": [
+          "http://qr.imenupro.com/*",
+          "https://qr.imenupro.com/*"
+        ],
         "url": "https://qr.imenupro.com/api/oembed",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -1943,10 +2257,14 @@
     "provider_url": "https://incredible.dev",
     "endpoints": [
       {
-        "schemes": ["https://incredible.dev/watch/*"],
+        "schemes": [
+          "https://incredible.dev/watch/*"
+        ],
         "url": "https://oembed.incredible.dev/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1955,9 +2273,13 @@
     "provider_url": "https://player.indacolive.com/",
     "endpoints": [
       {
-        "schemes": ["https://player.indacolive.com/player/jwp/clients/*"],
+        "schemes": [
+          "https://player.indacolive.com/player/jwp/clients/*"
+        ],
         "url": "https://player.indacolive.com/services/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -1966,7 +2288,9 @@
     "provider_url": "https://infogram.com/",
     "endpoints": [
       {
-        "schemes": ["https://infogram.com/*"],
+        "schemes": [
+          "https://infogram.com/*"
+        ],
         "url": "https://infogram.com/oembed"
       }
     ]
@@ -1990,7 +2314,9 @@
     "provider_url": "https://www.injurymap.com/",
     "endpoints": [
       {
-        "schemes": ["https://www.injurymap.com/exercises/*"],
+        "schemes": [
+          "https://www.injurymap.com/exercises/*"
+        ],
         "url": "https://www.injurymap.com/services/oembed",
         "discovery": true
       }
@@ -2001,7 +2327,9 @@
     "provider_url": "https://www.inoreader.com",
     "endpoints": [
       {
-        "schemes": ["https://www.inoreader.com/oembed/"],
+        "schemes": [
+          "https://www.inoreader.com/oembed/"
+        ],
         "url": "https://www.inoreader.com/oembed/api/",
         "discovery": true
       }
@@ -2012,9 +2340,13 @@
     "provider_url": "http://inphood.com/",
     "endpoints": [
       {
-        "schemes": ["http://*.inphood.com/*"],
+        "schemes": [
+          "http://*.inphood.com/*"
+        ],
         "url": "http://api.inphood.com/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2023,7 +2355,9 @@
     "provider_url": "https://insighttimer.com/",
     "endpoints": [
       {
-        "schemes": ["https://insighttimer.com/*"],
+        "schemes": [
+          "https://insighttimer.com/*"
+        ],
         "url": "https://widgets.insighttimer.com/services/oembed",
         "discovery": true
       }
@@ -2063,7 +2397,9 @@
           "https://instagr.am/reel/*"
         ],
         "url": "https://graph.facebook.com/v16.0/instagram_oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2072,7 +2408,9 @@
     "provider_url": "https://www.insticator.com/",
     "endpoints": [
       {
-        "schemes": ["https://ppa.insticator.com/embed-unit/*"],
+        "schemes": [
+          "https://ppa.insticator.com/embed-unit/*"
+        ],
         "url": "https://www.insticator.com/oembed",
         "discovery": true
       }
@@ -2083,7 +2421,9 @@
     "provider_url": "https://issuu.com/",
     "endpoints": [
       {
-        "schemes": ["https://issuu.com/*/docs/*"],
+        "schemes": [
+          "https://issuu.com/*/docs/*"
+        ],
         "url": "https://issuu.com/oembed",
         "discovery": true
       }
@@ -2094,7 +2434,9 @@
     "provider_url": "https://samay.itabtechinfosys.com/",
     "endpoints": [
       {
-        "schemes": ["https://samay.itabtechinfosys.com/*"],
+        "schemes": [
+          "https://samay.itabtechinfosys.com/*"
+        ],
         "url": "https://samay.itabtechinfosys.com/oembed/",
         "discovery": true
       }
@@ -2105,8 +2447,27 @@
     "provider_url": "https://play.itemis.io",
     "endpoints": [
       {
-        "schemes": ["https://play.itemis.io/*"],
+        "schemes": [
+          "https://play.itemis.io/*"
+        ],
         "url": "https://create.storage.api.itemis.io/api/embed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Jawafdehi",
+    "provider_url": "https://jawafdehi.org",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://jawafdehi.org/case/*"
+        ],
+        "url": "https://api.jawafdehi.org/oembed/",
+        "discovery": true,
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -2141,8 +2502,26 @@
           "https://play.juntos.live/host/quiz/*"
         ],
         "url": "https://play.juntos.live/api/oembed",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "JustSpin",
+    "provider_url": "https://www.justspin.cc/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.justspin.cc/workouts/*"
+        ],
+        "url": "https://www.justspin.cc/api/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2169,7 +2548,9 @@
     "provider_url": "http://www.kickstarter.com",
     "endpoints": [
       {
-        "schemes": ["http://www.kickstarter.com/projects/*"],
+        "schemes": [
+          "http://www.kickstarter.com/projects/*"
+        ],
         "url": "http://www.kickstarter.com/services/oembed"
       }
     ]
@@ -2206,7 +2587,10 @@
     "provider_url": "https://kit.co/",
     "endpoints": [
       {
-        "schemes": ["http://kit.co/*/*", "https://kit.co/*/*"],
+        "schemes": [
+          "http://kit.co/*/*",
+          "https://kit.co/*/*"
+        ],
         "url": "https://embed.kit.co/oembed",
         "discovery": true
       }
@@ -2217,7 +2601,9 @@
     "provider_url": "http://www.kitchenbowl.com",
     "endpoints": [
       {
-        "schemes": ["http://www.kitchenbowl.com/recipe/*"],
+        "schemes": [
+          "http://www.kitchenbowl.com/recipe/*"
+        ],
         "url": "http://www.kitchenbowl.com/oembed",
         "discovery": true
       }
@@ -2228,7 +2614,10 @@
     "provider_url": "https://kmdr.sh",
     "endpoints": [
       {
-        "schemes": ["https://app.kmdr.sh/h/*", "https://app.kmdr.sh/history/*"],
+        "schemes": [
+          "https://app.kmdr.sh/h/*",
+          "https://app.kmdr.sh/history/*"
+        ],
         "url": "https://api.kmdr.sh/services/oembed"
       }
     ]
@@ -2251,9 +2640,31 @@
     "provider_url": "https://knowledgepad.co/",
     "endpoints": [
       {
-        "schemes": ["https://knowledgepad.co/#/knowledge/*"],
+        "schemes": [
+          "https://knowledgepad.co/#/knowledge/*"
+        ],
         "url": "https://api.spoonacular.com/knowledge/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Kommodo",
+    "provider_url": "https://kommodo.ai/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://kommodo.ai/recordings/*",
+          "https://kommodo.ai/guides/*"
+        ],
+        "url": "https://kommodo.ai/api/oembed",
+        "discovery": true,
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -2262,7 +2673,10 @@
     "provider_url": "https://kooapp.com",
     "endpoints": [
       {
-        "schemes": ["https://*.kooapp.com/koo/*", "http://*.kooapp.com/koo/*"],
+        "schemes": [
+          "https://*.kooapp.com/koo/*",
+          "http://*.kooapp.com/koo/*"
+        ],
         "url": "https://embed.kooapp.com/services/oembed",
         "discovery": true
       }
@@ -2273,7 +2687,10 @@
     "provider_url": "https://kubit.ai",
     "endpoints": [
       {
-        "schemes": ["https://kubit.ai/*", "https://*.kubit.ai/*"],
+        "schemes": [
+          "https://kubit.ai/*",
+          "https://*.kubit.ai/*"
+        ],
         "url": "https://kubit.ai/services/oembed",
         "discovery": true
       }
@@ -2305,7 +2722,9 @@
           "https://landofassets.com/*/assets/*/embed"
         ],
         "url": "https://api.landofassets.com/oembed",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -2315,10 +2734,15 @@
     "provider_url": "https://laude.org",
     "endpoints": [
       {
-        "schemes": ["https://laude.org/impact/*", "https://laude.org/im/*"],
+        "schemes": [
+          "https://laude.org/impact/*",
+          "https://laude.org/im/*"
+        ],
         "url": "http://laude.org/api/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2327,7 +2751,9 @@
     "provider_url": "http://learningapps.org/",
     "endpoints": [
       {
-        "schemes": ["http://learningapps.org/*"],
+        "schemes": [
+          "http://learningapps.org/*"
+        ],
         "url": "http://learningapps.org/oembed.php",
         "discovery": true
       }
@@ -2338,7 +2764,9 @@
     "provider_url": "https://umotion-test.univ-lemans.fr/",
     "endpoints": [
       {
-        "schemes": ["https://umotion-test.univ-lemans.fr/video/*"],
+        "schemes": [
+          "https://umotion-test.univ-lemans.fr/video/*"
+        ],
         "url": "https://umotion-test.univ-lemans.fr/oembed",
         "discovery": true
       }
@@ -2349,7 +2777,9 @@
     "provider_url": "https://pod.univ-lille.fr/",
     "endpoints": [
       {
-        "schemes": ["https://pod.univ-lille.fr/video/*"],
+        "schemes": [
+          "https://pod.univ-lille.fr/video/*"
+        ],
         "url": "https://pod.univ-lille.fr/video/oembed",
         "discovery": true
       }
@@ -2360,7 +2790,9 @@
     "provider_url": "https://place.line.me",
     "endpoints": [
       {
-        "schemes": ["https://place.line.me/businesses/*"],
+        "schemes": [
+          "https://place.line.me/businesses/*"
+        ],
         "url": "https://place.line.me/oembed"
       }
     ]
@@ -2384,9 +2816,14 @@
     "provider_url": "https://livid.com",
     "endpoints": [
       {
-        "schemes": ["https://livid.com/watch/*"],
+        "schemes": [
+          "https://livid.com/watch/*"
+        ],
         "url": "https://livid.com/oembed",
-        "formats": ["json", "xml"],
+        "formats": [
+          "json",
+          "xml"
+        ],
         "discovery": true
       }
     ]
@@ -2396,7 +2833,10 @@
     "provider_url": "https://www.loom.com/",
     "endpoints": [
       {
-        "schemes": ["https://loom.com/i/*", "https://loom.com/share/*"],
+        "schemes": [
+          "https://loom.com/i/*",
+          "https://loom.com/share/*"
+        ],
         "url": "https://www.loom.com/v1/oembed",
         "discovery": true
       }
@@ -2415,7 +2855,9 @@
         ],
         "url": "https://embed.lottiefiles.com/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2424,10 +2866,14 @@
     "provider_url": "https://ludus.one",
     "endpoints": [
       {
-        "schemes": ["https://app.ludus.one/*"],
+        "schemes": [
+          "https://app.ludus.one/*"
+        ],
         "url": "https://app.ludus.one/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2436,7 +2882,9 @@
     "provider_url": "https://latd.com",
     "endpoints": [
       {
-        "schemes": ["https://*.lumiere.is/v/*"],
+        "schemes": [
+          "https://*.lumiere.is/v/*"
+        ],
         "url": "https://admin.lumiere.is/api/services/oembed",
         "discovery": true
       }
@@ -2447,7 +2895,9 @@
     "provider_url": "https://marimo.io/",
     "endpoints": [
       {
-        "schemes": ["https://marimo.app/*"],
+        "schemes": [
+          "https://marimo.app/*"
+        ],
         "url": "https://marimo.app/oembed",
         "discovery": true
       }
@@ -2473,7 +2923,9 @@
       {
         "url": "https://my.matterport.com/api/v1/models/oembed/",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2482,7 +2934,9 @@
     "provider_url": "https://me.me/",
     "endpoints": [
       {
-        "schemes": ["https://me.me/i/*"],
+        "schemes": [
+          "https://me.me/i/*"
+        ],
         "url": "https://me.me/oembed",
         "discovery": true
       }
@@ -2504,7 +2958,7 @@
     ]
   },
   {
-    "provider_name": "Medienarchiv der K\u00fcnste - Z\u00fcrcher Hochschule der K\u00fcnste",
+    "provider_name": "Medienarchiv der Künste - Zürcher Hochschule der Künste",
     "provider_url": "https://medienarchiv.zhdk.ch/",
     "endpoints": [
       {
@@ -2522,7 +2976,10 @@
     "provider_url": "https://mermaid.ink",
     "endpoints": [
       {
-        "schemes": ["https://mermaid.ink/img/*", "https://mermaid.ink/svg/*"],
+        "schemes": [
+          "https://mermaid.ink/img/*",
+          "https://mermaid.ink/svg/*"
+        ],
         "url": "https://mermaid.ink/services/oembed",
         "discovery": true
       }
@@ -2555,7 +3012,9 @@
           "https://app.minervaknows.com/recipes/*/follow"
         ],
         "url": "https://oembed.minervaknows.com",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -2565,12 +3024,16 @@
     "provider_url": "https://miro.com/",
     "endpoints": [
       {
-        "schemes": ["https://miro.com/app/board/*"],
+        "schemes": [
+          "https://miro.com/app/board/*"
+        ],
         "url": "https://miro.com/api/v1/oembed",
         "discovery": true
       },
       {
-        "schemes": ["https://miro.com/video-player/*"],
+        "schemes": [
+          "https://miro.com/video-player/*"
+        ],
         "url": "https://miro.com/video-player/oembed",
         "discovery": true
       }
@@ -2594,7 +3057,10 @@
     "provider_url": "https://mixpanel.com/",
     "endpoints": [
       {
-        "schemes": ["https://mixpanel.com/*", "https://*.mixpanel.com/*"],
+        "schemes": [
+          "https://mixpanel.com/*",
+          "https://*.mixpanel.com/*"
+        ],
         "url": "https://mixpanel.com/api/app/embed/oembed/"
       }
     ]
@@ -2617,9 +3083,13 @@
     "provider_url": "https://musicboxmaniacs.com/",
     "endpoints": [
       {
-        "schemes": ["https://musicboxmaniacs.com/explore/melody/*"],
+        "schemes": [
+          "https://musicboxmaniacs.com/explore/melody/*"
+        ],
         "url": "https://musicboxmaniacs.com/embed/",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -2629,7 +3099,9 @@
     "provider_url": "https://mybeweeg.com",
     "endpoints": [
       {
-        "schemes": ["https://mybeweeg.com/w/*"],
+        "schemes": [
+          "https://mybeweeg.com/w/*"
+        ],
         "url": "https://mybeweeg.com/services/oembed"
       }
     ]
@@ -2644,7 +3116,9 @@
           "https://embed.mysqlexplain.com/explain/*"
         ],
         "url": "https://api.mysqlexplain.com/v2/oembed.json",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -2654,9 +3128,14 @@
     "provider_url": "https://namchey.com",
     "endpoints": [
       {
-        "schemes": ["https://namchey.com/embeds/*"],
+        "schemes": [
+          "https://namchey.com/embeds/*"
+        ],
         "url": "https://namchey.com/api/oembed",
-        "formats": ["json", "xml"],
+        "formats": [
+          "json",
+          "xml"
+        ],
         "discovery": true
       }
     ]
@@ -2690,7 +3169,9 @@
     "provider_url": "https://www.nb.no/",
     "endpoints": [
       {
-        "schemes": ["https://www.nb.no/items/*"],
+        "schemes": [
+          "https://www.nb.no/items/*"
+        ],
         "url": "https://api.nb.no/catalog/v1/oembed",
         "discovery": true
       }
@@ -2709,7 +3190,9 @@
         ],
         "url": "https://naturalatlas.com/oembed.{format}",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2718,7 +3201,10 @@
     "provider_url": "https://m.naver.com/shorts",
     "endpoints": [
       {
-        "schemes": ["https://naver.me/*", "https://m.naver.com/shorts/*"],
+        "schemes": [
+          "https://naver.me/*",
+          "https://m.naver.com/shorts/*"
+        ],
         "url": "https://m.naver.com/shorts/oEmbed",
         "discovery": true
       }
@@ -2748,8 +3234,12 @@
     "endpoints": [
       {
         "url": "https://nebula.tv/api/oembed",
-        "formats": ["json"],
-        "schemes": ["https://nebula.tv/videos/*"]
+        "formats": [
+          "json"
+        ],
+        "schemes": [
+          "https://nebula.tv/videos/*"
+        ]
       }
     ]
   },
@@ -2759,8 +3249,12 @@
     "endpoints": [
       {
         "url": "https://beta.nebula.tv/api/oembed",
-        "formats": ["json"],
-        "schemes": ["https://beta.nebula.tv/videos/*"]
+        "formats": [
+          "json"
+        ],
+        "schemes": [
+          "https://beta.nebula.tv/videos/*"
+        ]
       }
     ]
   },
@@ -2775,7 +3269,9 @@
           "https://*.needle.run/*"
         ],
         "url": "https://cloud.needle.tools/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2784,7 +3280,9 @@
     "provider_url": "https://neetorecord.com",
     "endpoints": [
       {
-        "schemes": ["https://*.neetorecord.com/watch/*"],
+        "schemes": [
+          "https://*.neetorecord.com/watch/*"
+        ],
         "url": "https://api.neetorecord.com/api/v1/oembed"
       }
     ]
@@ -2794,7 +3292,9 @@
     "provider_url": "http://www.nfb.ca/",
     "endpoints": [
       {
-        "schemes": ["http://*.nfb.ca/film/*"],
+        "schemes": [
+          "http://*.nfb.ca/film/*"
+        ],
         "url": "http://www.nfb.ca/remote/services/oembed/",
         "discovery": true
       }
@@ -2805,7 +3305,9 @@
     "provider_url": "https://nopaste.ml",
     "endpoints": [
       {
-        "schemes": ["https://nopaste.ml/*"],
+        "schemes": [
+          "https://nopaste.ml/*"
+        ],
         "url": "https://oembed.nopaste.ml",
         "discovery": false
       }
@@ -2822,7 +3324,9 @@
           "https://observablehq.com/embed/*"
         ],
         "url": "https://api.observablehq.com/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2831,7 +3335,10 @@
     "provider_url": "https://www.odds.com.au",
     "endpoints": [
       {
-        "schemes": ["https://www.odds.com.au/*", "https://odds.com.au/*"],
+        "schemes": [
+          "https://www.odds.com.au/*",
+          "https://odds.com.au/*"
+        ],
         "url": "https://www.odds.com.au/api/oembed/"
       }
     ]
@@ -2851,7 +3358,9 @@
           "https://odesli.co/*"
         ],
         "url": "https://song.link/oembed",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -2861,7 +3370,10 @@
     "provider_url": "https://odysee.com",
     "endpoints": [
       {
-        "schemes": ["https://odysee.com/*/*", "https://odysee.com/*"],
+        "schemes": [
+          "https://odysee.com/*/*",
+          "https://odysee.com/*"
+        ],
         "url": "https://odysee.com/$/oembed",
         "discovery": true
       }
@@ -2885,9 +3397,13 @@
     "provider_url": "https://omniscope.me/",
     "endpoints": [
       {
-        "schemes": ["https://omniscope.me/*"],
+        "schemes": [
+          "https://omniscope.me/*"
+        ],
         "url": "https://omniscope.me/_global_/oembed/json",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2896,9 +3412,13 @@
     "provider_url": "https://omnystudio.com",
     "endpoints": [
       {
-        "schemes": ["https://omny.fm/shows/*"],
+        "schemes": [
+          "https://omny.fm/shows/*"
+        ],
         "url": "https://omny.fm/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -2929,12 +3449,16 @@
     "provider_url": "https://origits.com/",
     "endpoints": [
       {
-        "schemes": ["https://origits.com/v/*"],
+        "schemes": [
+          "https://origits.com/v/*"
+        ],
         "url": "https://origits.net/oembed",
         "discovery": true
       },
       {
-        "schemes": ["https://origits.com/v/*"],
+        "schemes": [
+          "https://origits.com/v/*"
+        ],
         "url": "https://origits.com/oembed",
         "discovery": true
       }
@@ -2945,7 +3469,9 @@
     "provider_url": "https://outplayed.tv/",
     "endpoints": [
       {
-        "schemes": ["https://outplayed.tv/media/*"],
+        "schemes": [
+          "https://outplayed.tv/media/*"
+        ],
         "url": "https://outplayed.tv/oembed",
         "discovery": true
       }
@@ -2956,7 +3482,10 @@
     "provider_url": "https://overflow.io",
     "endpoints": [
       {
-        "schemes": ["https://overflow.io/s/*", "https://overflow.io/embed/*"],
+        "schemes": [
+          "https://overflow.io/s/*",
+          "https://overflow.io/embed/*"
+        ],
         "url": "https://overflow.io/services/oembed",
         "discovery": true
       }
@@ -2967,9 +3496,14 @@
     "provider_url": "https://www.oz.com/",
     "endpoints": [
       {
-        "schemes": ["https://www.oz.com/*/video/*"],
+        "schemes": [
+          "https://www.oz.com/*/video/*"
+        ],
         "url": "https://core.oz.com/oembed",
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -2978,7 +3512,9 @@
     "provider_url": "https://padlet.com/",
     "endpoints": [
       {
-        "schemes": ["https://padlet.com/*"],
+        "schemes": [
+          "https://padlet.com/*"
+        ],
         "url": "https://padlet.com/oembed/",
         "discovery": true
       }
@@ -3034,7 +3570,9 @@
     "provider_url": "https://peertube.tv/",
     "endpoints": [
       {
-        "schemes": ["https://peertube.tv/w/*"],
+        "schemes": [
+          "https://peertube.tv/w/*"
+        ],
         "url": "https://peertube.tv/services/oembed"
       }
     ]
@@ -3058,7 +3596,10 @@
     "provider_url": "https://piggy.to",
     "endpoints": [
       {
-        "schemes": ["https://piggy.to/@*/*", "https://piggy.to/view/*"],
+        "schemes": [
+          "https://piggy.to/@*/*",
+          "https://piggy.to/view/*"
+        ],
         "url": "https://piggy.to/oembed"
       }
     ]
@@ -3068,10 +3609,14 @@
     "provider_url": "https://builder.pikasso.xyz",
     "endpoints": [
       {
-        "schemes": ["https://*.builder.pikasso.xyz/embed/*"],
+        "schemes": [
+          "https://*.builder.pikasso.xyz/embed/*"
+        ],
         "url": "https://builder.pikasso.xyz/api/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3090,10 +3635,15 @@
     "provider_url": "https://www.pinpoll.com/products/tools",
     "endpoints": [
       {
-        "schemes": ["https://tools.pinpoll.com/embed/*"],
+        "schemes": [
+          "https://tools.pinpoll.com/embed/*"
+        ],
         "url": "https://tools.pinpoll.com/oembed",
         "discovery": true,
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -3102,7 +3652,9 @@
     "provider_url": "https://www.pinterest.com",
     "endpoints": [
       {
-        "schemes": ["https://www.pinterest.com/*"],
+        "schemes": [
+          "https://www.pinterest.com/*"
+        ],
         "url": "https://www.pinterest.com/oembed.json",
         "discovery": true
       }
@@ -3113,7 +3665,9 @@
     "provider_url": "https://www.pitchhub.com/",
     "endpoints": [
       {
-        "schemes": ["https://player.pitchhub.com/en/public/player/*"],
+        "schemes": [
+          "https://player.pitchhub.com/en/public/player/*"
+        ],
         "url": "https://player.pitchhub.com/en/public/oembed",
         "discovery": true
       }
@@ -3129,7 +3683,10 @@
           "https://store.pixdor.com/map/*/show"
         ],
         "url": "https://store.pixdor.com/oembed",
-        "formats": ["json", "xml"],
+        "formats": [
+          "json",
+          "xml"
+        ],
         "discovery": true
       }
     ]
@@ -3139,10 +3696,15 @@
     "provider_url": "https://plinth.it",
     "endpoints": [
       {
-        "schemes": ["https://plinth.it/model-viewer/*/*"],
+        "schemes": [
+          "https://plinth.it/model-viewer/*/*"
+        ],
         "url": "https://plinth.it/model-viewer/oembed",
         "discovery": true,
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -3158,7 +3720,9 @@
         ],
         "url": "https://app.plusdocs.com/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3167,7 +3731,10 @@
     "provider_url": "http://podbean.com",
     "endpoints": [
       {
-        "schemes": ["https://*.podbean.com/e/*", "http://*.podbean.com/e/*"],
+        "schemes": [
+          "https://*.podbean.com/e/*",
+          "http://*.podbean.com/e/*"
+        ],
         "url": "https://api.podbean.com/v1/oembed"
       }
     ]
@@ -3191,7 +3758,9 @@
     "provider_url": "https://portfolium.com",
     "endpoints": [
       {
-        "schemes": ["https://portfolium.com/entry/*"],
+        "schemes": [
+          "https://portfolium.com/entry/*"
+        ],
         "url": "https://api.portfolium.com/oembed"
       }
     ]
@@ -3201,10 +3770,14 @@
     "provider_url": "https://present.do",
     "endpoints": [
       {
-        "schemes": ["https://present.do/decks/*"],
+        "schemes": [
+          "https://present.do/decks/*"
+        ],
         "url": "https://gateway.cobalt.run/present/decks/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3213,7 +3786,10 @@
     "provider_url": "https://prezi.com/",
     "endpoints": [
       {
-        "schemes": ["https://prezi.com/v/*", "https://*.prezi.com/v/*"],
+        "schemes": [
+          "https://prezi.com/v/*",
+          "https://*.prezi.com/v/*"
+        ],
         "url": "https://prezi.com/v/oembed",
         "discovery": true
       }
@@ -3224,7 +3800,9 @@
     "provider_url": "https://programmingly.dev",
     "endpoints": [
       {
-        "schemes": ["https://programmingly.dev/snippets/*"],
+        "schemes": [
+          "https://programmingly.dev/snippets/*"
+        ],
         "url": "https://programmingly.dev/api/oembed",
         "discovery": true
       }
@@ -3235,7 +3813,9 @@
     "provider_url": "https://qtpi.gg/",
     "endpoints": [
       {
-        "schemes": ["https://qtpi.gg/fashion/*"],
+        "schemes": [
+          "https://qtpi.gg/fashion/*"
+        ],
         "url": "https://qtpi.gg/fashion/oembed",
         "discovery": true
       }
@@ -3246,7 +3826,10 @@
     "provider_url": "http://quartr.com",
     "endpoints": [
       {
-        "schemes": ["https://quartr.com/*", "https://web.quartr.com/*"],
+        "schemes": [
+          "https://quartr.com/*",
+          "https://web.quartr.com/*"
+        ],
         "url": "https://web.quartr.com/api/oembed",
         "discovery": true
       }
@@ -3257,10 +3840,14 @@
     "provider_url": "http://quellensuche.de",
     "endpoints": [
       {
-        "schemes": ["http://quellensuche.de/*"],
+        "schemes": [
+          "http://quellensuche.de/*"
+        ],
         "url": "http://quellensuche.de/api/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3269,7 +3856,9 @@
     "provider_url": "http://www.quiz.biz/",
     "endpoints": [
       {
-        "schemes": ["http://www.quiz.biz/quizz-*.html"],
+        "schemes": [
+          "http://www.quiz.biz/quizz-*.html"
+        ],
         "url": "http://www.quiz.biz/api/oembed",
         "discovery": true
       }
@@ -3280,7 +3869,9 @@
     "provider_url": "http://www.quizz.biz/",
     "endpoints": [
       {
-        "schemes": ["http://www.quizz.biz/quizz-*.html"],
+        "schemes": [
+          "http://www.quizz.biz/quizz-*.html"
+        ],
         "url": "http://www.quizz.biz/api/oembed",
         "discovery": true
       }
@@ -3318,7 +3909,9 @@
         ],
         "url": "https://pub.raindrop.io/api/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3378,7 +3971,9 @@
     "provider_url": "http://www.releasewire.com/",
     "endpoints": [
       {
-        "schemes": ["http://rwire.com/*"],
+        "schemes": [
+          "http://rwire.com/*"
+        ],
         "url": "http://publisher.releasewire.com/oembed/",
         "discovery": true
       }
@@ -3389,7 +3984,10 @@
     "provider_url": "https://replit.com/",
     "endpoints": [
       {
-        "schemes": ["https://repl.it/@*/*", "https://replit.com/@*/*"],
+        "schemes": [
+          "https://repl.it/@*/*",
+          "https://replit.com/@*/*"
+        ],
         "url": "https://replit.com/data/oembed",
         "discovery": true
       }
@@ -3406,6 +4004,22 @@
         ],
         "url": "https://www.reverbnation.com/oembed",
         "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Risky Business",
+    "provider_url": "https://risky.biz/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://risky.biz/*"
+        ],
+        "url": "https://risky.biz/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3427,9 +4041,13 @@
     "provider_url": "https://roosterteeth.com",
     "endpoints": [
       {
-        "schemes": ["https://roosterteeth.com/*"],
+        "schemes": [
+          "https://roosterteeth.com/*"
+        ],
         "url": "https://roosterteeth.com/oembed",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -3439,7 +4057,10 @@
     "provider_url": "https://rumble.com/",
     "endpoints": [
       {
-        "schemes": ["https://rumble.com/*", "https://rumble.com/shorts/*"],
+        "schemes": [
+          "https://rumble.com/*",
+          "https://rumble.com/shorts/*"
+        ],
         "url": "https://rumble.com/api/Media/oembed.{format}",
         "discovery": true
       }
@@ -3455,7 +4076,44 @@
           "https://embed.runkit.com/*,"
         ],
         "url": "https://embed.runkit.com/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "rushes.cc",
+    "provider_url": "https://www.rushes.cc",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.rushes.cc/video/*",
+          "https://www.rushes.cc/embed/*",
+          "https://rushes.cc/video/*",
+          "https://rushes.cc/embed/*"
+        ],
+        "url": "https://api.rushes.cc/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
+      }
+    ]
+  },
+  {
+    "provider_name": "Sagenverse",
+    "provider_url": "https://sagenverse.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://app2.sagenverse.com/embed/*"
+        ],
+        "url": "https://app2.sagenverse.com/oembed",
+        "discovery": true,
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3464,7 +4122,9 @@
     "provider_url": "https://octopus.saooti.com",
     "endpoints": [
       {
-        "schemes": ["https://octopus.saooti.com/main/pub/podcast/*"],
+        "schemes": [
+          "https://octopus.saooti.com/main/pub/podcast/*"
+        ],
         "url": "https://octopus.saooti.com/oembed"
       }
     ]
@@ -3474,7 +4134,9 @@
     "provider_url": "http://videos.sapo.pt",
     "endpoints": [
       {
-        "schemes": ["http://videos.sapo.pt/*"],
+        "schemes": [
+          "http://videos.sapo.pt/*"
+        ],
         "url": "http://videos.sapo.pt/oembed"
       }
     ]
@@ -3484,7 +4146,9 @@
     "provider_url": "https://www.satcat.com/",
     "endpoints": [
       {
-        "schemes": ["https://www.satcat.com/sats/*"],
+        "schemes": [
+          "https://www.satcat.com/sats/*"
+        ],
         "url": "https://www.satcat.com/api/sats/oembed",
         "discovery": true
       }
@@ -3495,7 +4159,9 @@
     "provider_url": "http://satoplayer.com",
     "endpoints": [
       {
-        "schemes": ["https://api.satoplayer.com/players/embed/*"],
+        "schemes": [
+          "https://api.satoplayer.com/players/embed/*"
+        ],
         "url": "https://api.satoplayer.com/players/oembed",
         "discovery": true
       }
@@ -3506,7 +4172,9 @@
     "provider_url": "https://sbedit.net",
     "endpoints": [
       {
-        "schemes": ["https://sbedit.net/*"],
+        "schemes": [
+          "https://sbedit.net/*"
+        ],
         "url": "https://sbedit.net/oembed/",
         "discovery": true
       }
@@ -3531,7 +4199,10 @@
     "provider_url": "http://www.screen9.com/",
     "endpoints": [
       {
-        "schemes": ["https://console.screen9.com/*", "https://*.screen9.tv/*"],
+        "schemes": [
+          "https://console.screen9.com/*",
+          "https://*.screen9.tv/*"
+        ],
         "url": "https://api.screen9.com/oembed"
       }
     ]
@@ -3541,7 +4212,9 @@
     "provider_url": "http://www.screencast.com/",
     "endpoints": [
       {
-        "schemes": ["http://www.screencast.com/*"],
+        "schemes": [
+          "http://www.screencast.com/*"
+        ],
         "url": "https://api.screencast.com/external/oembed",
         "discovery": true
       }
@@ -3552,7 +4225,9 @@
     "provider_url": "http://www.screenr.com/",
     "endpoints": [
       {
-        "schemes": ["http://www.screenr.com/*/"],
+        "schemes": [
+          "http://www.screenr.com/*/"
+        ],
         "url": "http://www.screenr.com/api/oembed.{format}"
       }
     ]
@@ -3578,7 +4253,9 @@
     "provider_url": "http://www.scribd.com/",
     "endpoints": [
       {
-        "schemes": ["http://www.scribd.com/doc/*"],
+        "schemes": [
+          "http://www.scribd.com/doc/*"
+        ],
         "url": "http://www.scribd.com/services/oembed/"
       }
     ]
@@ -3588,10 +4265,15 @@
     "provider_url": "http://www.sendtonews.com/",
     "endpoints": [
       {
-        "schemes": ["https://embed.sendtonews.com/oembed/*"],
+        "schemes": [
+          "https://embed.sendtonews.com/oembed/*"
+        ],
         "url": "https://embed.sendtonews.com/services/oembed",
         "discovery": true,
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -3600,7 +4282,9 @@
     "provider_url": "https://shared-file-kappa.vercel.app/file/",
     "endpoints": [
       {
-        "schemes": ["https://shared-file-kappa.vercel.app/file/*"],
+        "schemes": [
+          "https://shared-file-kappa.vercel.app/file/*"
+        ],
         "url": "https://shared-file-kappa.vercel.app/file/api/oembed",
         "discovery": true
       }
@@ -3625,7 +4309,9 @@
     "provider_url": "https://www.shortnote.jp/",
     "endpoints": [
       {
-        "schemes": ["https://www.shortnote.jp/view/notes/*"],
+        "schemes": [
+          "https://www.shortnote.jp/view/notes/*"
+        ],
         "url": "https://www.shortnote.jp/oembed/",
         "discovery": true
       }
@@ -3636,7 +4322,10 @@
     "provider_url": "http://shoudio.com",
     "endpoints": [
       {
-        "schemes": ["http://shoudio.com/*", "http://shoud.io/*"],
+        "schemes": [
+          "http://shoudio.com/*",
+          "http://shoud.io/*"
+        ],
         "url": "http://shoudio.com/api/oembed"
       }
     ]
@@ -3660,7 +4349,9 @@
     "provider_url": "https://showtheway.io",
     "endpoints": [
       {
-        "schemes": ["https://showtheway.io/to/*"],
+        "schemes": [
+          "https://showtheway.io/to/*"
+        ],
         "url": "https://showtheway.io/oembed",
         "discovery": true
       }
@@ -3671,9 +4362,13 @@
     "provider_url": "https://simplecast.com",
     "endpoints": [
       {
-        "schemes": ["https://simplecast.com/s/*"],
+        "schemes": [
+          "https://simplecast.com/s/*"
+        ],
         "url": "https://simplecast.com/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3682,7 +4377,9 @@
     "provider_url": "https://onsizzle.com/",
     "endpoints": [
       {
-        "schemes": ["https://onsizzle.com/i/*"],
+        "schemes": [
+          "https://onsizzle.com/i/*"
+        ],
         "url": "https://onsizzle.com/oembed",
         "discovery": true
       }
@@ -3713,7 +4410,9 @@
           "https://sketchfab.com/*/folders/*"
         ],
         "url": "http://sketchfab.com/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3774,7 +4473,9 @@
     "provider_url": "https://smeme.com",
     "endpoints": [
       {
-        "schemes": ["https://open.smeme.com/*"],
+        "schemes": [
+          "https://open.smeme.com/*"
+        ],
         "url": "https://open.smeme.com/api/oembed",
         "discovery": true
       }
@@ -3785,9 +4486,13 @@
     "provider_url": "https://www.smrthi.com",
     "endpoints": [
       {
-        "schemes": ["https://www.smrthi.com/book/*"],
+        "schemes": [
+          "https://www.smrthi.com/book/*"
+        ],
         "url": "https://www.smrthi.com/api/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3796,7 +4501,10 @@
     "provider_url": "https://www.smugmug.com/",
     "endpoints": [
       {
-        "schemes": ["http://*.smugmug.com/*", "https://*.smugmug.com/*"],
+        "schemes": [
+          "http://*.smugmug.com/*",
+          "https://*.smugmug.com/*"
+        ],
         "url": "https://api.smugmug.com/services/oembed/",
         "discovery": true
       }
@@ -3861,7 +4569,9 @@
         ],
         "url": "https://speakerdeck.com/oembed.json",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3901,7 +4611,10 @@
     "provider_url": "https://www.spreaker.com/",
     "endpoints": [
       {
-        "schemes": ["http://*.spreaker.com/*", "https://*.spreaker.com/*"],
+        "schemes": [
+          "http://*.spreaker.com/*",
+          "https://*.spreaker.com/*"
+        ],
         "url": "https://api.spreaker.com/oembed",
         "discovery": true
       }
@@ -3917,7 +4630,10 @@
           "https://*.vids.io/videos/*"
         ],
         "url": "http://sproutvideo.com/oembed.{format}",
-        "formats": ["json", "xml"],
+        "formats": [
+          "json",
+          "xml"
+        ],
         "discovery": true
       }
     ]
@@ -3947,7 +4663,9 @@
         ],
         "url": "https://api.spyke.social/embed/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -3956,7 +4674,9 @@
     "provider_url": "https://purl.stanford.edu/",
     "endpoints": [
       {
-        "schemes": ["https://purl.stanford.edu/*"],
+        "schemes": [
+          "https://purl.stanford.edu/*"
+        ],
         "url": "https://purl.stanford.edu/embed.{format}",
         "discovery": true
       }
@@ -3967,7 +4687,10 @@
     "provider_url": "https://streamable.com/",
     "endpoints": [
       {
-        "schemes": ["http://streamable.com/*", "https://streamable.com/*"],
+        "schemes": [
+          "http://streamable.com/*",
+          "https://streamable.com/*"
+        ],
         "url": "https://api.streamable.com/oembed.json",
         "discovery": true
       }
@@ -3978,7 +4701,10 @@
     "provider_url": "https://www.streamio.com",
     "endpoints": [
       {
-        "schemes": ["https://s3m.io/*", "https://23m.io/*"],
+        "schemes": [
+          "https://s3m.io/*",
+          "https://23m.io/*"
+        ],
         "url": "https://streamio.com/api/v1/oembed",
         "discovery": true
       }
@@ -3989,7 +4715,9 @@
     "provider_url": "https://subscribi.io/",
     "endpoints": [
       {
-        "schemes": ["https://subscribi.io/api/oembed*"],
+        "schemes": [
+          "https://subscribi.io/api/oembed*"
+        ],
         "url": "https://subscribi.io/api/oembed",
         "discovery": true
       }
@@ -4018,7 +4746,9 @@
     "provider_url": "https://supercut.ai/",
     "endpoints": [
       {
-        "schemes": ["https://supercut.ai/share/*"],
+        "schemes": [
+          "https://supercut.ai/share/*"
+        ],
         "url": "https://supercut.ai/oembed",
         "discovery": true
       }
@@ -4029,10 +4759,14 @@
     "provider_url": "https://www.sutori.com/",
     "endpoints": [
       {
-        "schemes": ["https://www.sutori.com/story/*"],
+        "schemes": [
+          "https://www.sutori.com/story/*"
+        ],
         "url": "https://www.sutori.com/api/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -4041,7 +4775,10 @@
     "provider_url": "https://www.sway.com",
     "endpoints": [
       {
-        "schemes": ["https://sway.com/*", "https://www.sway.com/*"],
+        "schemes": [
+          "https://sway.com/*",
+          "https://www.sway.com/*"
+        ],
         "url": "https://sway.com/api/v1.0/oembed",
         "discovery": true
       }
@@ -4052,7 +4789,9 @@
     "provider_url": "https://sway.office.com",
     "endpoints": [
       {
-        "schemes": ["https://sway.office.com/*"],
+        "schemes": [
+          "https://sway.office.com/*"
+        ],
         "url": "https://sway.office.com/api/v1.0/oembed",
         "discovery": true
       }
@@ -4063,9 +4802,13 @@
     "provider_url": "https://www.synthesia.io/",
     "endpoints": [
       {
-        "schemes": ["https://share.synthesia.io/*"],
+        "schemes": [
+          "https://share.synthesia.io/*"
+        ],
         "url": "https://69jr5v75rc.execute-api.eu-west-1.amazonaws.com/prod/v2/oembed",
-        "formats": ["json"],
+        "formats": [
+          "json"
+        ],
         "discovery": true
       }
     ]
@@ -4075,7 +4818,9 @@
     "provider_url": "https://techpostcast.com",
     "endpoints": [
       {
-        "schemes": ["https://techpostcast.com/headline-topic-programs/*"],
+        "schemes": [
+          "https://techpostcast.com/headline-topic-programs/*"
+        ],
         "url": "https://techpostcast.com/oembed/",
         "discovery": true
       }
@@ -4101,7 +4846,10 @@
     "provider_url": "https://www.tella.tv/",
     "endpoints": [
       {
-        "schemes": ["https://www.tella.tv/video/*", "https://tella.video/*"],
+        "schemes": [
+          "https://www.tella.tv/video/*",
+          "https://tella.video/*"
+        ],
         "url": "https://www.tella.tv/api/oembed",
         "discovery": true
       }
@@ -4112,7 +4860,9 @@
     "provider_url": "https://hubspot-media-bridge.thedamconsultants.com/",
     "endpoints": [
       {
-        "schemes": ["https://hubspot-media-bridge.thedamconsultants.com/*"],
+        "schemes": [
+          "https://hubspot-media-bridge.thedamconsultants.com/*"
+        ],
         "url": "https://hubspot-media-bridge.thedamconsultants.com/oembed/",
         "discovery": true
       }
@@ -4138,7 +4888,9 @@
     "provider_url": "https://theysaidso.com/",
     "endpoints": [
       {
-        "schemes": ["https://theysaidso.com/image/*"],
+        "schemes": [
+          "https://theysaidso.com/image/*"
+        ],
         "url": "https://theysaidso.com/extensions/oembed/",
         "discovery": true
       }
@@ -4190,7 +4942,10 @@
     "provider_url": "https://tksn.me",
     "endpoints": [
       {
-        "schemes": ["https://tksn.me/*", "https://*.tksn.me/*"],
+        "schemes": [
+          "https://tksn.me/*",
+          "https://*.tksn.me/*"
+        ],
         "url": "https://tksn.me/api/oembed/",
         "discovery": true
       }
@@ -4209,7 +4964,9 @@
         ],
         "url": "https://tonicaudio.com/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -4226,7 +4983,10 @@
         ],
         "url": "https://widget.toornament.com/oembed",
         "discovery": true,
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -4235,7 +4995,9 @@
     "provider_url": "http://www.topy.se/",
     "endpoints": [
       {
-        "schemes": ["http://www.topy.se/image/*"],
+        "schemes": [
+          "http://www.topy.se/image/*"
+        ],
         "url": "http://www.topy.se/oembed/",
         "discovery": true
       }
@@ -4246,7 +5008,9 @@
     "provider_url": "https://totango.com",
     "endpoints": [
       {
-        "schemes": ["https://app-test.totango.com/*"],
+        "schemes": [
+          "https://app-test.totango.com/*"
+        ],
         "url": "https://app-test.totango.com/oembed",
         "discovery": true
       }
@@ -4257,7 +5021,9 @@
     "provider_url": "http://trackspace.upitup.com/",
     "endpoints": [
       {
-        "schemes": ["http://trackspace.upitup.com/*"],
+        "schemes": [
+          "http://trackspace.upitup.com/*"
+        ],
         "url": "https://trackspace.upitup.com/oembed"
       }
     ]
@@ -4282,7 +5048,10 @@
     "provider_url": "https://trycli.com",
     "endpoints": [
       {
-        "schemes": ["https://trycli.com/e/*", "https://trycli.com/*/*"],
+        "schemes": [
+          "https://trycli.com/e/*",
+          "https://trycli.com/*/*"
+        ],
         "url": "https://trycli.com/api/oembed",
         "discovery": true
       }
@@ -4293,7 +5062,9 @@
     "provider_url": "https://www.tumblr.com",
     "endpoints": [
       {
-        "schemes": ["https://*.tumblr.com/post/*"],
+        "schemes": [
+          "https://*.tumblr.com/post/*"
+        ],
         "url": "https://www.tumblr.com/oembed/1.0"
       }
     ]
@@ -4303,7 +5074,9 @@
     "provider_url": "https://www.tuxx.be/",
     "endpoints": [
       {
-        "schemes": ["https://www.tuxx.be/*"],
+        "schemes": [
+          "https://www.tuxx.be/*"
+        ],
         "url": "https://www.tuxx.be/services/oembed",
         "discovery": true
       }
@@ -4314,7 +5087,10 @@
     "provider_url": "http://tvcf.co.kr",
     "endpoints": [
       {
-        "schemes": ["https://play.tvcf.co.kr/*", "https://*.tvcf.co.kr/*"],
+        "schemes": [
+          "https://play.tvcf.co.kr/*",
+          "https://*.tvcf.co.kr/*"
+        ],
         "url": "https://play.tvcf.co.kr/rest/oembed"
       }
     ]
@@ -4329,7 +5105,9 @@
           "https://twinmotion.unrealengine.com/panorama/*"
         ],
         "url": "https://twinmotion.unrealengine.com/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -4376,7 +5154,9 @@
     "provider_url": "https://uapod.univ-antilles.fr/",
     "endpoints": [
       {
-        "schemes": ["https://uapod.univ-antilles.fr/video/*"],
+        "schemes": [
+          "https://uapod.univ-antilles.fr/video/*"
+        ],
         "url": "https://uapod.univ-antilles.fr/oembed",
         "discovery": true
       }
@@ -4387,7 +5167,9 @@
     "provider_url": "https://map.cam.ac.uk",
     "endpoints": [
       {
-        "schemes": ["https://map.cam.ac.uk/*"],
+        "schemes": [
+          "https://map.cam.ac.uk/*"
+        ],
         "url": "https://map.cam.ac.uk/oembed/"
       }
     ]
@@ -4397,7 +5179,9 @@
     "provider_url": "https://mediatheque.univ-paris1.fr/",
     "endpoints": [
       {
-        "schemes": ["https://mediatheque.univ-paris1.fr/video/*"],
+        "schemes": [
+          "https://mediatheque.univ-paris1.fr/video/*"
+        ],
         "url": "https://mediatheque.univ-paris1.fr/oembed",
         "discovery": true
       }
@@ -4408,7 +5192,9 @@
     "provider_url": "https://pod.u-pec.fr/",
     "endpoints": [
       {
-        "schemes": ["https://pod.u-pec.fr/video/*"],
+        "schemes": [
+          "https://pod.u-pec.fr/video/*"
+        ],
         "url": "https://pod.u-pec.fr/oembed",
         "discovery": true
       }
@@ -4419,9 +5205,14 @@
     "provider_url": "http://www.ustream.tv",
     "endpoints": [
       {
-        "schemes": ["http://*.ustream.tv/*", "http://*.ustream.com/*"],
+        "schemes": [
+          "http://*.ustream.tv/*",
+          "http://*.ustream.com/*"
+        ],
         "url": "http://www.ustream.tv/oembed",
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -4436,7 +5227,9 @@
         ],
         "url": "https://app.ustudio.com/api/v2/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -4445,12 +5238,16 @@
     "provider_url": "http://veer.tv/",
     "endpoints": [
       {
-        "schemes": ["http://veer.tv/videos/*"],
+        "schemes": [
+          "http://veer.tv/videos/*"
+        ],
         "url": "https://api.veer.tv/oembed",
         "discovery": true
       },
       {
-        "schemes": ["http://veervr.tv/videos/*"],
+        "schemes": [
+          "http://veervr.tv/videos/*"
+        ],
         "url": "https://api.veervr.tv/oembed",
         "discovery": true
       }
@@ -4461,7 +5258,10 @@
     "provider_url": "http://www.vevo.com/",
     "endpoints": [
       {
-        "schemes": ["http://www.vevo.com/*", "https://www.vevo.com/*"],
+        "schemes": [
+          "http://www.vevo.com/*",
+          "https://www.vevo.com/*"
+        ],
         "url": "https://www.vevo.com/oembed",
         "discovery": false
       }
@@ -4472,7 +5272,9 @@
     "provider_url": "https://videfit.com/",
     "endpoints": [
       {
-        "schemes": ["https://videfit.com/videos/*"],
+        "schemes": [
+          "https://videfit.com/videos/*"
+        ],
         "url": "https://videfit.com/oembed",
         "discovery": false
       }
@@ -4483,7 +5285,9 @@
     "provider_url": "https://vidmount.com/",
     "endpoints": [
       {
-        "schemes": ["https://vidmount.com/*"],
+        "schemes": [
+          "https://vidmount.com/*"
+        ],
         "url": "https://vidmount.com/oembed",
         "discovery": true
       }
@@ -4529,10 +5333,15 @@
     "provider_url": "https://www.viostream.com",
     "endpoints": [
       {
-        "schemes": ["https://share.viostream.com/*"],
+        "schemes": [
+          "https://share.viostream.com/*"
+        ],
         "url": "https://play.viostream.com/oembed",
         "discovery": true,
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -4541,10 +5350,15 @@
     "provider_url": "https://www.viously.com",
     "endpoints": [
       {
-        "schemes": ["https://www.viously.com/*/*"],
+        "schemes": [
+          "https://www.viously.com/*/*"
+        ],
         "url": "https://www.viously.com/oembed",
         "discovery": true,
-        "formats": ["json", "xml"]
+        "formats": [
+          "json",
+          "xml"
+        ]
       }
     ]
   },
@@ -4553,10 +5367,15 @@
     "provider_url": "https://vizdom.dev",
     "endpoints": [
       {
-        "schemes": ["https://vizdom.dev/link/*"],
+        "schemes": [
+          "https://vizdom.dev/link/*"
+        ],
         "url": "https://vizdom.dev/api/v1/oembed",
         "discovery": true,
-        "formats": ["xml", "json"]
+        "formats": [
+          "xml",
+          "json"
+        ]
       }
     ]
   },
@@ -4565,7 +5384,9 @@
     "provider_url": "https://vizydrop.com",
     "endpoints": [
       {
-        "schemes": ["https://vizydrop.com/shared/*"],
+        "schemes": [
+          "https://vizydrop.com/shared/*"
+        ],
         "url": "https://vizydrop.com/oembed"
       }
     ]
@@ -4575,7 +5396,9 @@
     "provider_url": "https://vlipsy.com/",
     "endpoints": [
       {
-        "schemes": ["https://vlipsy.com/*"],
+        "schemes": [
+          "https://vlipsy.com/*"
+        ],
         "url": "https://vlipsy.com/oembed",
         "discovery": true
       }
@@ -4587,8 +5410,12 @@
     "endpoints": [
       {
         "url": "https://www.vlive.tv/oembed",
-        "schemes": ["https://www.vlive.tv/video/*"],
-        "formats": ["json"]
+        "schemes": [
+          "https://www.vlive.tv/video/*"
+        ],
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -4597,7 +5424,9 @@
     "provider_url": "https://www.vouchfor.com/",
     "endpoints": [
       {
-        "schemes": ["https://*.vouchfor.com/*"],
+        "schemes": [
+          "https://*.vouchfor.com/*"
+        ],
         "url": "https://embed.vouchfor.com/v1/oembed",
         "discovery": true
       }
@@ -4608,10 +5437,14 @@
     "provider_url": "https://voxsnap.com/",
     "endpoints": [
       {
-        "schemes": ["https://article.voxsnap.com/*/*"],
+        "schemes": [
+          "https://article.voxsnap.com/*/*"
+        ],
         "url": "https://data.voxsnap.com/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -4620,7 +5453,9 @@
     "provider_url": "https://waltrack/net",
     "endpoints": [
       {
-        "schemes": ["https://waltrack.net/product/*"],
+        "schemes": [
+          "https://waltrack.net/product/*"
+        ],
         "url": "https://waltrack.net/oembed",
         "discovery": true
       }
@@ -4631,7 +5466,10 @@
     "provider_url": "https://wave.video",
     "endpoints": [
       {
-        "schemes": ["https://watch.wave.video/*", "https://embed.wave.video/*"],
+        "schemes": [
+          "https://watch.wave.video/*",
+          "https://embed.wave.video/*"
+        ],
         "url": "https://embed.wave.video/oembed",
         "discovery": true
       }
@@ -4657,9 +5495,14 @@
     "provider_url": "https://webcrumbs.org/",
     "endpoints": [
       {
-        "schemes": ["https://plugins.webcrumbs.dev/*"],
+        "schemes": [
+          "https://plugins.webcrumbs.dev/*"
+        ],
         "url": "https://webcrumbs.dev/oembed",
-        "formats": ["json", "xml"],
+        "formats": [
+          "json",
+          "xml"
+        ],
         "discovery": true
       }
     ]
@@ -4669,8 +5512,24 @@
     "provider_url": "https://www.wecandeo.com/",
     "endpoints": [
       {
-        "schemes": ["https://play.wecandeo.com/video/v/*"],
+        "schemes": [
+          "https://play.wecandeo.com/video/v/*"
+        ],
         "url": "https://play.wecandeo.com/oembed/",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "Wewtalk",
+    "provider_url": "https://www.wewtalk.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.wewtalk.com/voice/*",
+          "https://wewtalk.com/voice/*"
+        ],
+        "url": "https://www.wewtalk.com/api/oembed",
         "discovery": true
       }
     ]
@@ -4680,7 +5539,10 @@
     "provider_url": "https://www.whimsical.com",
     "endpoints": [
       {
-        "schemes": ["https://whimsical.com/*", "https://whimsical.com/*/*"],
+        "schemes": [
+          "https://whimsical.com/*",
+          "https://whimsical.com/*/*"
+        ],
         "url": "https://whimsical.com/api/oembed",
         "discovery": true
       }
@@ -4720,10 +5582,14 @@
     "provider_url": "https://wokwi.com",
     "endpoints": [
       {
-        "schemes": ["https://wokwi.com/share/*"],
+        "schemes": [
+          "https://wokwi.com/share/*"
+        ],
         "url": "https://wokwi.com/api/oembed",
         "discovery": true,
-        "formats": ["json"]
+        "formats": [
+          "json"
+        ]
       }
     ]
   },
@@ -4732,7 +5598,9 @@
     "provider_url": "https://www.wolframcloud.com",
     "endpoints": [
       {
-        "schemes": ["https://*.wolframcloud.com/*"],
+        "schemes": [
+          "https://*.wolframcloud.com/*"
+        ],
         "url": "https://www.wolframcloud.com/oembed",
         "discovery": true
       }
@@ -4799,7 +5667,9 @@
     "provider_url": "https://www.yumpu.com/",
     "endpoints": [
       {
-        "schemes": ["https://www.yumpu.com/*/document/view/*/*"],
+        "schemes": [
+          "https://www.yumpu.com/*/document/view/*/*"
+        ],
         "url": "https://www.yumpu.com/services/oembed",
         "discovery": true
       }
@@ -4840,7 +5710,9 @@
     "provider_url": "https://www.znipe.tv/",
     "endpoints": [
       {
-        "schemes": ["https://*.znipe.tv/*"],
+        "schemes": [
+          "https://*.znipe.tv/*"
+        ],
         "url": "https://api.znipe.tv/v3/oembed/",
         "discovery": true
       }
@@ -4851,7 +5723,9 @@
     "provider_url": "https://zoomable.ca/",
     "endpoints": [
       {
-        "schemes": ["https://srv2.zoomable.ca/viewer.php*"],
+        "schemes": [
+          "https://srv2.zoomable.ca/viewer.php*"
+        ],
         "url": "https://srv2.zoomable.ca/oembed",
         "discovery": true
       }
